@@ -315,6 +315,32 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
 .bc .val{margin-top:8px;font-size:12.5px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .bc .val s{opacity:.6}.bc .val b{color:var(--gold-2)}
 @media(max-width:760px){.steps3{grid-template-columns:1fr}.steps3 .st{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}.steps3 .st b{grid-row:span 2}.steps3 .st h3{margin:0}.blocks6{grid-template-columns:repeat(3,1fr)}.bongrid{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== Garantía (arte) ===== */
+.gar{background:linear-gradient(180deg,var(--lav),#fff)}
+.garcard{position:relative;overflow:hidden;max-width:900px;margin:0 auto;display:grid;grid-template-columns:230px 1fr;gap:30px;align-items:center;padding:34px 30px;border-radius:26px;color:#fff;background:radial-gradient(120% 130% at 0% 0%,var(--primary-3),var(--primary-2) 45%,var(--primary));box-shadow:0 26px 54px -20px rgba(11,37,69,.6);border:1px solid rgba(255,196,0,.25)}
+.garcard:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:radial-gradient(circle at 20% 30%,#000,transparent 75%);mask-image:radial-gradient(circle at 20% 30%,#000,transparent 75%)}
+.garcard:after{content:"";position:absolute;width:260px;height:260px;left:-40px;top:-30px;border-radius:50%;background:radial-gradient(circle,rgba(255,196,0,.28),transparent 70%);pointer-events:none}
+.seal{position:relative;z-index:1}
+.seal-svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 26px rgba(0,0,0,.45));animation:sealFloat 4.5s ease-in-out infinite}
+.seal-svg .ring{transform-origin:120px 112px;animation:sealSpin 26s linear infinite}
+.seal-svg .shine{animation:sealShine 3.6s ease-in-out infinite}
+@keyframes sealFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes sealSpin{to{transform:rotate(360deg)}}
+@keyframes sealShine{0%{transform:translateX(0) rotate(20deg)}60%,100%{transform:translateX(380px) rotate(20deg)}}
+.gartext{position:relative;z-index:1}
+.gartag{display:inline-block;background:rgba(255,196,0,.14);border:1px solid rgba(255,196,0,.5);color:var(--gold-2);font-family:var(--fh);font-weight:800;font-size:12px;letter-spacing:.14em;padding:6px 14px;border-radius:var(--rr)}
+.garcard h2{font-family:var(--fh);font-weight:900;font-size:clamp(28px,5vw,44px);line-height:1.05;margin:12px 0 8px;color:#fff;text-transform:uppercase}
+.garcard h2 span{color:var(--gold)}
+.garcard .garlead{font-size:clamp(15.5px,2.6vw,18px);color:rgba(255,255,255,.9);max-width:520px;margin-top:0}
+.garsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.garsteps div{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 12px 13px}
+.garsteps div:last-child{background:rgba(255,196,0,.13);border-color:rgba(255,196,0,.55)}
+.garsteps div:not(:last-child):after{content:"›";position:absolute;right:-11px;top:50%;transform:translateY(-52%);width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--primary);font-weight:900;font-size:16px;line-height:19px;text-align:center;z-index:2}
+.garsteps b{display:block;font-family:var(--fh);font-size:12.5px;letter-spacing:.06em;color:var(--gold-2)}
+.garsteps span{display:block;margin-top:4px;font-size:13.5px;line-height:1.35;color:#fff}
+@media(max-width:700px){.garcard{grid-template-columns:1fr;text-align:center;padding:28px 18px;gap:14px}.seal{max-width:190px;margin:0 auto}.garlead{margin:0 auto}.garsteps{grid-template-columns:1fr;gap:14px;text-align:left}.garsteps div:not(:last-child):after{content:"⌄";right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%);line-height:15px}}
+@media(prefers-reduced-motion:reduce){.seal-svg,.seal-svg .ring,.seal-svg .shine{animation:none}}
 </style>
 <!-- PIXEL: pegar aquí el código del píxel de Meta -->
 </head>
@@ -488,11 +514,40 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
 
 <!-- GARANTIA -->
 <section class="sec gar">
-  <div class="garwrap">
-    <div class="gseal-css"><b>7</b><span>DÍAS DE<br>GARANTÍA</span></div>
-    <div>
-      <h2 class="h2">GARANTÍA DE 7 DÍAS O TE DEVOLVEMOS TU DINERO</h2>
-      <p>Abre la guía, consulta una ficha y comprueba si te ayuda a reconocer lo que pasa en tu casa. Si sientes que no te sirvió, pide el reembolso dentro de los 7 días y te devolvemos el 100% de lo que pagaste. Sin preguntas y sin complicaciones. El riesgo es todo nuestro.</p>
+  <div class="wrap">
+    <div class="garcard">
+      <div class="seal"><svg class="seal-svg" viewBox="0 0 240 262" role="img" aria-label="Sello de garantía de 7 días, reembolso del 100%">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE98A"/><stop offset=".45" stop-color="#FFC400"/><stop offset="1" stop-color="#D99A00"/></linearGradient>
+    <radialGradient id="gNavy" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#22385a"/><stop offset="1" stop-color="#0F1B2D"/></radialGradient>
+    <linearGradient id="gShine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <clipPath id="cRos"><path d="M120.0,8.0 L130.5,18.6 L143.1,10.6 L151.0,23.3 L165.1,18.3 L170.0,32.4 L184.8,30.7 L186.5,45.5 L201.3,47.2 L199.6,62.0 L213.7,66.9 L208.7,81.0 L221.4,88.9 L213.4,101.5 L224.0,112.0 L213.4,122.5 L221.4,135.1 L208.7,143.0 L213.7,157.1 L199.6,162.0 L201.3,176.8 L186.5,178.5 L184.8,193.3 L170.0,191.6 L165.1,205.7 L151.0,200.7 L143.1,213.4 L130.5,205.4 L120.0,216.0 L109.5,205.4 L96.9,213.4 L89.0,200.7 L74.9,205.7 L70.0,191.6 L55.2,193.3 L53.5,178.5 L38.7,176.8 L40.4,162.0 L26.3,157.1 L31.3,143.0 L18.6,135.1 L26.6,122.5 L16.0,112.0 L26.6,101.5 L18.6,88.9 L31.3,81.0 L26.3,66.9 L40.4,62.0 L38.7,47.2 L53.5,45.5 L55.2,30.7 L70.0,32.4 L74.9,18.3 L89.0,23.3 L96.9,10.6 L109.5,18.6 Z"/></clipPath>
+    <path id="ringPath" d="M 120,112 m -62,0 a 62,62 0 1,1 124,0 a 62,62 0 1,1 -124,0"/>
+  </defs>
+  <path d="M120.0,8.0 L130.5,18.6 L143.1,10.6 L151.0,23.3 L165.1,18.3 L170.0,32.4 L184.8,30.7 L186.5,45.5 L201.3,47.2 L199.6,62.0 L213.7,66.9 L208.7,81.0 L221.4,88.9 L213.4,101.5 L224.0,112.0 L213.4,122.5 L221.4,135.1 L208.7,143.0 L213.7,157.1 L199.6,162.0 L201.3,176.8 L186.5,178.5 L184.8,193.3 L170.0,191.6 L165.1,205.7 L151.0,200.7 L143.1,213.4 L130.5,205.4 L120.0,216.0 L109.5,205.4 L96.9,213.4 L89.0,200.7 L74.9,205.7 L70.0,191.6 L55.2,193.3 L53.5,178.5 L38.7,176.8 L40.4,162.0 L26.3,157.1 L31.3,143.0 L18.6,135.1 L26.6,122.5 L16.0,112.0 L26.6,101.5 L18.6,88.9 L31.3,81.0 L26.3,66.9 L40.4,62.0 L38.7,47.2 L53.5,45.5 L55.2,30.7 L70.0,32.4 L74.9,18.3 L89.0,23.3 L96.9,10.6 L109.5,18.6 Z" fill="url(#gGold)"/>
+  <g clip-path="url(#cRos)"><rect class="shine" x="-120" y="0" width="70" height="230" fill="url(#gShine)" transform="rotate(20 120 112)"/></g>
+  <circle cx="120" cy="112" r="84" fill="url(#gNavy)"/>
+  <circle cx="120" cy="112" r="77" fill="none" stroke="#FFC400" stroke-width="2"/>
+  <circle cx="120" cy="112" r="47" fill="none" stroke="#FFC400" stroke-opacity=".45" stroke-width="1.2"/>
+  <g class="ring"><text font-family="Poppins,system-ui,sans-serif" font-weight="800" font-size="11" fill="#FFD54A"><textPath href="#ringPath" textLength="384" lengthAdjust="spacing">★ GARANTÍA TOTAL ★ RIESGO CERO ★ COMPRA SEGURA </textPath></text></g>
+  <text x="120" y="128" text-anchor="middle" font-family="Poppins,system-ui,sans-serif" font-weight="900" font-size="58" fill="url(#gGold)">7</text>
+  <text x="120" y="146" text-anchor="middle" font-family="Poppins,system-ui,sans-serif" font-weight="800" font-size="13" letter-spacing="3" fill="#fff">DÍAS</text>
+  <path d="M8,188 L36,188 L36,226 L8,226 L20,207 Z" fill="#b82c22"/>
+  <path d="M232,188 L204,188 L204,226 L232,226 L220,207 Z" fill="#b82c22"/>
+  <path d="M28,180 L212,180 L212,220 L28,220 Z" fill="#E5372B"/>
+  <path d="M28,220 L36,226 L36,220 Z M212,220 L204,226 L204,220 Z" fill="#7a1d16"/>
+  <text x="120" y="206" text-anchor="middle" font-family="Poppins,system-ui,sans-serif" font-weight="900" font-size="16" letter-spacing="1" fill="#fff">100% REEMBOLSO</text>
+</svg></div>
+      <div class="gartext">
+        <span class="gartag">🛡️ RIESGO CERO</span>
+        <h2>GARANTÍA DE <span>7 DÍAS</span></h2>
+        <p class="garlead">Si la guía no te sirve, te devolvemos el 100% de tu dinero. El riesgo es todo nuestro.</p>
+        <div class="garsteps">
+          <div><b>DÍA 1</b><span>Compras y abres la guía al instante.</span></div>
+          <div><b>DÍAS 1 A 7</b><span>La usas en tu casa, sin compromiso.</span></div>
+          <div><b>¿NO TE SIRVIÓ?</b><span>Te devolvemos el 100%, sin preguntas.</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
