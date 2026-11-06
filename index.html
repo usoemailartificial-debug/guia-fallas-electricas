@@ -291,12 +291,36 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
 .fmini{margin:10px auto 0;max-width:640px}
 .btn{color:#fff}
 @media(max-width:480px){.mock-hero .mh-l{left:-2%}.mock-hero .mh-r{right:-2%}.mh-seal{width:76px;height:76px;font-size:11px}.mock-bundle.small{height:200px}}
+
+/* ===== Compacto ===== */
+.how{background:var(--lav)}
+.signs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:760px;margin:22px auto 0}
+.signs span{background:#fff;border:1px solid var(--line);border-radius:var(--rr);padding:8px 14px;font-size:14px;font-weight:700;box-shadow:0 4px 12px rgba(11,37,69,.06)}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:860px;margin:26px auto 0}
+.steps3 .st{background:var(--primary);color:#fff;border-radius:16px;padding:16px 14px;text-align:left}
+.steps3 .st b{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--gold);color:var(--primary);align-items:center;justify-content:center;font-family:var(--fh);font-weight:900}
+.steps3 .st h3{font-size:16px;margin:8px 0 4px;color:#fff}
+.steps3 .st p{font-size:13.5px;color:rgba(255,255,255,.82);line-height:1.4}
+.blocks6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;max-width:860px;margin:18px auto 0}
+.blocks6 div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 6px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.blocks6 i{font-style:normal;font-size:24px}
+.blocks6 b{font-family:var(--fh);font-size:13.5px}
+.blocks6 small{font-size:12px;color:var(--muted);font-weight:600}
+.mini{margin-top:16px;font-size:14px;color:var(--muted);font-weight:600}
+.bongrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px;text-align:left}
+.bc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:10px}
+.bc img{width:100%;height:auto;border-radius:10px;display:block}
+.bc h3{color:#fff;font-size:14.5px;margin:10px 0 4px;line-height:1.2}
+.bc p{font-size:12.5px;color:rgba(255,255,255,.78);line-height:1.35}
+.bc .val{margin-top:8px;font-size:12.5px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.bc .val s{opacity:.6}.bc .val b{color:var(--gold-2)}
+@media(max-width:760px){.steps3{grid-template-columns:1fr}.steps3 .st{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}.steps3 .st b{grid-row:span 2}.steps3 .st h3{margin:0}.blocks6{grid-template-columns:repeat(3,1fr)}.bongrid{grid-template-columns:repeat(2,1fr)}}
 </style>
 <!-- PIXEL: pegar aquí el código del píxel de Meta -->
 </head>
 <body>
 
-<div class="topbar">⚡ OFERTA DE LANZAMIENTO DISPONIBLE SOLO HOY <span id="oferta-data"></span> · 🔒 COMPRA 100% SEGURA</div>
+<div class="topbar">⚡ OFERTA DE LANZAMIENTO DISPONIBLE SOLO HOY · 🔒 COMPRA 100% SEGURA</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -337,7 +361,7 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
 <section class="sec prev center">
   <div class="wrap">
     <h2 class="h2">📖 MIRA LA GUÍA POR DENTRO</h2>
-    <p class="lead">Cada ficha es visual y va directo al punto: qué estás viendo, la causa probable, cómo diferenciarla de otra falla parecida, qué revisar y cuándo es urgente.</p>
+    <p class="lead">Cada ficha te dice qué estás viendo, la causa probable, qué revisar y si es urgente.</p>
     <div class="marquee" data-speed="40">
       <div class="mqtrack">
         <div class="mqitem"><img src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha 01 Enchufe quemado"></div>
@@ -355,181 +379,52 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
   </div>
 </section>
 
-<!-- DOR -->
-<section class="sec dor center">
+<!-- COMO FUNCIONA (compacto) -->
+<section class="sec how center">
   <div class="wrap">
-    <h2 class="h2">HOY LA RESPUESTA QUE NECESITAS ESTÁ REGADA EN SEIS LUGARES</h2>
-    <div class="scatter">
-      <span><i>▶️</i>un video de YouTube</span>
-      <span><i>💬</i>el consejo del vecino</span>
-      <span><i>📱</i>un grupo de WhatsApp</span>
-      <span><i>🔍</i>una búsqueda en Google</span>
-      <span><i>🧑‍🔧</i>un electricista que no te explica</span>
-      <span><i>🤷</i>"seguro no es nada"</span>
+    <h2 class="h2">TU CASA TE AVISA. <span class="coral">¿SABES QUÉ SIGNIFICA?</span></h2>
+    <div class="signs">
+      <span>🔥 Olor a quemado</span><span>🔌 Enchufe caliente</span><span>⚡ Pastilla que se bota</span><span>💡 Luz que parpadea</span><span>😖 Te da corriente</span><span>💸 Recibo alto</span>
     </div>
-    <p class="restart">Y cuando aparece otra falla, la búsqueda empieza de nuevo.</p>
-    <div class="dorfix">La Guía Visual junta todo en un solo lugar. En vez de buscar desde cero, <b>empiezas por lo que estás viendo en tu casa</b>.</div>
+    <div class="steps3">
+      <div class="st"><b>1</b><h3>VES la señal</h3><p>El Mapa Rápido te lleva al bloque correcto.</p></div>
+      <div class="st"><b>2</b><h3>COMPARAS</h3><p>La ficha ilustrada te muestra qué falla es.</p></div>
+      <div class="st"><b>3</b><h3>ACTÚAS</h3><p>Causa, qué revisar, semáforo 🟢🟡🔴 y próximo paso.</p></div>
+    </div>
+    <div class="blocks6">
+      <div><i>🔌</i><b>Enchufes</b><small>7 fichas</small></div>
+      <div><i>🧵</i><b>Cables</b><small>7 fichas</small></div>
+      <div><i>🎛️</i><b>Tablero</b><small>9 fichas</small></div>
+      <div><i>💡</i><b>Iluminación</b><small>6 fichas</small></div>
+      <div><i>⚡</i><b>Fugas</b><small>6 fichas</small></div>
+      <div><i>🏠</i><b>Instalación</b><small>7 fichas</small></div>
+    </div>
+    <p class="mini">+50 fichas ilustradas · sin saber de electricidad · en el celular o impresa</p>
   </div>
 </section>
 
-<!-- MECANISMO -->
-<section class="sec rota center">
-  <div class="wrap">
-    <p class="bonsub">El método</p>
-    <h2 class="h2">CONSULTA POR SEÑAL</h2>
-    <div class="grid g4" style="margin-top:38px">
-      <div class="rcard"><div class="big">01</div><h3>Lo que ves</h3><p>Olor a quemado, chispa, calor, una luz que parpadea. Empiezas por la señal, no por el nombre técnico.</p></div>
-      <div class="rcard"><div class="big">02</div><h3>El bloque correcto</h3><p>El Mapa Rápido te lleva a uno de los 6 bloques: enchufes, cables, tablero, iluminación, fugas o instalación.</p></div>
-      <div class="rcard"><div class="big">03</div><h3>La ficha más parecida</h3><p>Comparas la imagen con lo que tienes delante y encuentras la falla más probable.</p></div>
-      <div class="rcard"><div class="big">04</div><h3>Causa, qué revisar y qué hacer</h3><p>La ficha te dice la causa, qué verificar, el nivel de atención y el próximo paso.</p></div>
-    </div>
-    <div class="bigidea">
-      <div class="lbl">La gran idea</div>
-      <p>Deja de buscar la falla en Google. Empieza por lo que estás viendo.</p>
-    </div>
-    <div class="rota-photo"><img src="assets/img/p02-mapa.webp" width="386" height="517" loading="lazy" alt="Página de la guía: Mapa rápido de señales"></div>
-  </div>
-</section>
-
-<!-- BLOQUES -->
-<section class="sec libs center">
-  <div class="wrap">
-    <h2 class="h2">LOS 6 BLOQUES DE LA GUÍA</h2>
-    <div class="grid g3" style="margin-top:38px">
-      <div class="libcard"><div class="e">🔌</div><div class="n">Bloque 01</div><h3>Enchufes y tomacorrientes</h3><span class="qt">7 fichas + comparación</span><p>Enchufe quemado, caliente, flojo, que da chispa o que no tiene energía.</p></div>
-      <div class="libcard"><div class="e">🧵</div><div class="n">Bloque 02</div><h3>Cables y olor a quemado</h3><span class="qt">7 fichas + comparación</span><p>Falso contacto, cable que se calienta, empalmes mal hechos y cables dañados.</p></div>
-      <div class="libcard"><div class="e">🎛️</div><div class="n">Bloque 03</div><h3>Tablero y pastillas</h3><span class="qt">9 fichas + comparación</span><p>Pastilla que se bota, diferencial que salta, tablero caliente o desordenado.</p></div>
-      <div class="libcard"><div class="e">💡</div><div class="n">Bloque 04</div><h3>Iluminación</h3><span class="qt">6 fichas + comparación</span><p>Luces que parpadean, focos que se queman seguido, interruptores que calientan.</p></div>
-      <div class="libcard"><div class="e">⚡</div><div class="n">Bloque 05</div><h3>Fugas y descargas</h3><span class="qt">6 fichas + comparación</span><p>Te da corriente, el medidor avanza con todo apagado, el recibo sube sin razón.</p></div>
-      <div class="libcard"><div class="e">🏠</div><div class="n">Bloque 06</div><h3>Errores de instalación</h3><span class="qt">7 fichas + comparación</span><p>Sin puesta a tierra, regletas en cadena, cable delgado, pastilla equivocada.</p></div>
-    </div>
-    <div class="libtotal"><b>6 bloques</b><b>+50 fichas ilustradas</b><b>Todo en el mismo formato</b></div>
-  </div>
-</section>
-
-<!-- CADA FICHA -->
-<section class="sec tem center">
-  <div class="wrap">
-    <h2 class="h2">LO QUE TRAE CADA FICHA</h2>
-    <div class="tem-list">
-      <div class="temi"><span class="e">👁️</span><b>¿Qué estás viendo? Las señales que identifican la falla.</b></div>
-      <div class="temi"><span class="e">🖼️</span><b>Ilustración con las señales marcadas para comparar.</b></div>
-      <div class="temi"><span class="e">🔎</span><b>Causas más probables, en orden.</b></div>
-      <div class="temi"><span class="e">⚖️</span><b>Comparación: ¿es esto o aquello? (ej. falso contacto o sobrecarga).</b></div>
-      <div class="temi"><span class="e">☑️</span><b>Qué verificar, con preguntas simples.</b></div>
-      <div class="temi"><span class="e">🚦</span><b>Nivel de atención: verde, ámbar o rojo.</b></div>
-      <div class="temi"><span class="e">➡️</span><b>Próximo paso: qué hacer ahora mismo.</b></div>
-      <div class="temi"><span class="e">🧑‍🔧</span><b>Cuándo llamar a un electricista sin dudar.</b></div>
-    </div>
-    <div class="tem-photo two"><img src="assets/img/p01-como-usar.webp" width="386" height="517" loading="lazy" alt="Cómo usar esta guía"><img src="assets/img/f08-falso-contacto.webp" width="386" height="517" loading="lazy" alt="Ficha Falso contacto"></div>
-  </div>
-</section>
-
-<!-- O QUE FAZ POR VOCÊ -->
-<section class="sec bene center">
-  <div class="wrap">
-    <h2 class="h2">LO QUE ESTA GUÍA HACE POR TI</h2>
-    <p class="lead">Encuentra la señal, compárala y entiende qué está pasando y qué revisar.</p>
-    <div class="grid g2" style="margin-top:34px;text-align:left">
-      <div class="bcard"><h3>🔌 Reconocer la falla</h3><p>Comparas color, olor, calor, ruido y dónde aparece el problema para reconocer enchufes quemados, falsos contactos, cables recalentados, pastillas que se botan y fugas de corriente.</p></div>
-      <div class="bcard"><h3>⚖️ Diferenciar fallas parecidas</h3><p>Ves las señales que separan problemas que parecen iguales: falso contacto o sobrecarga, sobrecarga o cortocircuito, consumo oculto o fuga, una luz o toda la casa.</p></div>
-      <div class="bcard"><h3>🔎 Entender la causa y qué revisar</h3><p>Sabes si el problema viene de un tornillo flojo, un empalme mal hecho, un cable delgado, humedad o un aparato, y qué preguntas hacerte antes de tocar nada.</p></div>
-      <div class="bcard"><h3>🚦 Saber si es urgente</h3><p>El semáforo te dice si puedes observar, si tienes que corregir esta semana o si debes cortar la energía hoy mismo, y cuál es el próximo paso.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- AGITAÇÃO -->
-<section class="sec agi center">
-  <div class="wrap">
-    <p class="bonsub">⚡ Oferta especial para quien quiere una casa más segura</p>
-    <h2 class="h2">NO NECESITAS SER ELECTRICISTA. NECESITAS SABER <span class="coral">QUÉ ESTÁS VIENDO Y QUÉ HACER PRIMERO</span></h2>
-    <div class="agitext">
-      <p>Hueles a quemado y no sabes de dónde viene. La pastilla se bota y la vuelves a subir, una y otra vez. El enchufe de la cocina está tibio y lo sigues usando. Una luz parpadea desde hace semanas. El recibo de luz llegó más alto y nadie en casa sabe por qué.</p>
-      <p>No sabes si es algo sin importancia o el comienzo de un incendio. Buscas en Google, ves videos que se contradicen y el electricista te cobra sin explicarte nada.</p>
-      <p><b>El 99% de las personas no sabe reconocer un falso contacto… hasta que se incendia.</b> Y lo peor: <b>la pastilla y el diferencial no te protegen de esto</b>, porque un falso contacto calienta sin hacer saltar nada.</p>
-      <p>Lo que necesitas es algo listo, visual y ordenado, para abrir en el celular en el momento en que ves la señal.</p>
-    </div>
-    <div class="agibox"><b>Guía completa con +50 fichas ilustradas</b><span>Ver → Comparar → Reconocer → Actuar</span></div>
-    <a href="#planos" class="btn" data-pv-cta="">QUIERO ACCEDER A LA GUÍA AHORA →</a>
-  </div>
-</section>
-
-<!-- URGÊNCIA -->
+<!-- GANCHO -->
 <section class="urg">
   <div class="wrap">
-    <h2>Cuanto antes reconozcas la señal, menos riesgo corres</h2>
-    <p class="urgp">Un cable que se calienta en silencio, un enchufe que se derrite dentro de la pared o una fuga que da corriente no avisan dos veces. Reconocer la falla a tiempo es la diferencia entre cambiar un tomacorriente o perder una habitación.</p>
-    <a href="#planos" class="btn" data-pv-cta="">QUIERO CONSULTAR POR LA SEÑAL</a>
+    <h2>El 99% no sabe reconocer un falso contacto… hasta que se incendia</h2>
+    <p class="urgp">La pastilla y el diferencial no te protegen de esto. La guía te enseña a verlo a tiempo.</p>
+    <a href="#planos" class="btn" data-pv-cta="">QUIERO LA GUÍA AHORA</a>
   </div>
 </section>
 
-<!-- IDEAL -->
-<section class="sec win center">
-  <div class="wrap">
-    <h2 class="h2">IDEAL PARA TI SI…</h2>
-    <div class="grid g3" style="margin-top:38px">
-      <div class="wincard"><div class="ic">🏠</div><h3>Tienes dudas cada vez que algo eléctrico falla en casa</h3></div>
-      <div class="wincard"><div class="ic">🏚️</div><h3>Vives en una casa o departamento con instalación antigua</h3></div>
-      <div class="wincard"><div class="ic">👨‍👩‍👧</div><h3>Tienes niños o adultos mayores en casa</h3></div>
-      <div class="wincard"><div class="ic">🔑</div><h3>Alquilas o vas a comprar una vivienda</h3></div>
-      <div class="wincard"><div class="ic">🧰</div><h3>Eres técnico o electricista y quieres una referencia visual</h3></div>
-      <div class="wincard"><div class="ic">💵</div><h3>Quieres pagar lo justo y que no te engañen</h3></div>
-    </div>
-  </div>
-</section>
-
-<!-- TUDO -->
-<section class="sec org center">
-  <div class="wrap">
-    <h2 class="h2">TODO EN UN SOLO LUGAR, EN EL MISMO FORMATO</h2>
-    <div class="mock-bundle">
-      <img class="mb1" src="assets/img/bono1.webp" width="448" height="600" loading="lazy" alt="Bono 1">
-      <img class="mb2" src="assets/img/bono2.webp" width="448" height="600" loading="lazy" alt="Bono 2">
-      <img class="mb3" src="assets/img/bono3.webp" width="448" height="600" loading="lazy" alt="Bono 3">
-      <img class="mb4" src="assets/img/bono4.webp" width="448" height="600" loading="lazy" alt="Bono 4">
-      <img class="mbc" src="assets/img/guia-capa.webp" width="386" height="517" loading="lazy" alt="Guía Visual de Fallas Eléctricas en Casa">
-    </div>
-    <ul class="orglist">
-      <li><span class="c">✓</span> 6 bloques organizados por señal</li>
-      <li><span class="c">✓</span> +50 fichas ilustradas</li>
-      <li><span class="c">✓</span> Mapa rápido para encontrar tu falla</li>
-      <li><span class="c">✓</span> Semáforo de atención en cada ficha</li>
-      <li><span class="c">✓</span> Comparaciones entre fallas parecidas</li>
-      <li><span class="c">✓</span> Causas más probables</li>
-      <li><span class="c">✓</span> Qué verificar antes de tocar nada</li>
-      <li><span class="c">✓</span> Próximo paso en cada ficha</li>
-      <li><span class="c">✓</span> Enchufes, cables y tablero</li>
-      <li><span class="c">✓</span> Iluminación, fugas y descargas</li>
-      <li><span class="c">✓</span> Errores de instalación</li>
-      <li><span class="c">✓</span> Chequeo rápido de 15 minutos</li>
-      <li><span class="c">✓</span> Cuándo llamar a un electricista</li>
-      <li><span class="c">✓</span> Abre en el celular o imprímela</li>
-    </ul>
-  </div>
-</section>
-
-<!-- BÔNUS -->
+<!-- BÔNUS (compacto) -->
 <section class="sec bonus center">
   <div class="wrap">
-    <p class="bonsub">…y no termina aquí</p>
-    <h2 class="h2">EN EL PLAN COMPLETO TE LLEVAS 4 BONOS</h2>
-    <p class="bonwarn">(disponibles solo hoy · si compras después, no los recibes)</p>
-    <div class="grid g2" style="margin-top:40px">
-      <div class="boncard"><span class="tag">🎁 BONO 1</span><div class="bonimg"><img src="assets/img/bono1.webp" width="448" height="600" loading="lazy" alt="Plan de Emergencia Eléctrica"></div>
-        <h3>Plan de Emergencia Eléctrica</h3><p>Qué hacer en los primeros minutos ante un cortocircuito, un incendio eléctrico, una descarga o un cable caído. Incluye tarjeta de emergencia para imprimir y pegar junto al tablero.</p>
-        <div class="val"><s>US$ 9,90</s> <b>HOY GRATIS</b></div></div>
-      <div class="boncard"><span class="tag">🎁 BONO 2</span><div class="bonimg"><img src="assets/img/bono2.webp" width="448" height="600" loading="lazy" alt="Mapa de tu Tablero"></div>
-        <h3>Mapa de tu Tablero</h3><p>Paso a paso para identificar qué controla cada pastilla en 20 minutos, con plantilla imprimible y etiquetas para recortar. En una emergencia sabes cuál bajar en segundos.</p>
-        <div class="val"><s>US$ 7,90</s> <b>HOY GRATIS</b></div></div>
-      <div class="boncard"><span class="tag">🎁 BONO 3</span><div class="bonimg"><img src="assets/img/bono3.webp" width="448" height="600" loading="lazy" alt="Que no te engañen"></div>
-        <h3>Que no te engañen</h3><p>8 preguntas para hacerle al electricista, tabla para comparar presupuestos, señales de trabajo mal hecho y checklist para revisar antes de pagar.</p>
-        <div class="val"><s>US$ 12,90</s> <b>HOY GRATIS</b></div></div>
-      <div class="boncard"><span class="tag">🎁 BONO 4</span><div class="bonimg"><img src="assets/img/bono4.webp" width="448" height="600" loading="lazy" alt="Tabla de Consumo y Fugas"></div>
-        <h3>Tabla de Consumo y Fugas</h3><p>Cuánto gasta cada aparato, cómo calcular tu consumo y la prueba del medidor para descubrir si tu casa pierde electricidad y en qué circuito.</p>
-        <div class="val"><s>US$ 9,90</s> <b>HOY GRATIS</b></div></div>
+    <p class="bonsub">En el Plan Completo te llevas</p>
+    <h2 class="h2">4 BONOS GRATIS</h2>
+    <p class="bonwarn">solo hoy · si compras después, no los recibes</p>
+    <div class="bongrid">
+      <div class="bc"><img src="assets/img/bono1.webp" width="448" height="600" loading="lazy" alt="Bono 1 Plan de Emergencia Eléctrica"><h3>Plan de Emergencia Eléctrica</h3><p>Qué hacer en los primeros minutos + tarjeta para el tablero.</p><div class="val"><s>US$ 9,90</s> <b>GRATIS</b></div></div>
+      <div class="bc"><img src="assets/img/bono2.webp" width="448" height="600" loading="lazy" alt="Bono 2 Mapa de tu Tablero"><h3>Mapa de tu Tablero</h3><p>Sabe qué pastilla bajar en segundos. Con etiquetas.</p><div class="val"><s>US$ 7,90</s> <b>GRATIS</b></div></div>
+      <div class="bc"><img src="assets/img/bono3.webp" width="448" height="600" loading="lazy" alt="Bono 3 Que no te engañen"><h3>Que no te engañen</h3><p>Preguntas, presupuestos y checklist antes de pagar.</p><div class="val"><s>US$ 12,90</s> <b>GRATIS</b></div></div>
+      <div class="bc"><img src="assets/img/bono4.webp" width="448" height="600" loading="lazy" alt="Bono 4 Tabla de Consumo y Fugas"><h3>Consumo y Fugas</h3><p>Qué gasta cada aparato y la prueba del medidor.</p><div class="val"><s>US$ 9,90</s> <b>GRATIS</b></div></div>
     </div>
-    <div class="bontotal">Valor total de los bonos: <s>US$ 40,60</s> → <b>GRATIS en el Plan Completo</b></div>
+    <div class="bontotal">Valor de los bonos: <s>US$ 40,60</s> → <b>GRATIS hoy</b></div>
   </div>
 </section>
 
@@ -587,7 +482,7 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
         <div class="pay">🔒 Pago seguro · Visa · Mastercard · Amex</div>
       </div>
     </div>
-    <div class="paygrid"><span>🔒 Pago 100% seguro procesado por Stripe · precios en dólares (USD)</span></div>
+    <div class="paygrid"><span>📩 Acceso inmediato por correo · 🔒 Pago seguro con Stripe · precios en dólares (USD)</span></div>
   </div>
 </section>
 
@@ -598,19 +493,6 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
     <div>
       <h2 class="h2">GARANTÍA DE 7 DÍAS O TE DEVOLVEMOS TU DINERO</h2>
       <p>Abre la guía, consulta una ficha y comprueba si te ayuda a reconocer lo que pasa en tu casa. Si sientes que no te sirvió, pide el reembolso dentro de los 7 días y te devolvemos el 100% de lo que pagaste. Sin preguntas y sin complicaciones. El riesgo es todo nuestro.</p>
-    </div>
-  </div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="sec passos center">
-  <div class="wrap">
-    <h2 class="h2">CÓMO FUNCIONA EL ACCESO</h2>
-    <div class="grid g4" style="margin-top:38px">
-      <div class="passo"><div class="pic">💳</div><h3>Haz tu compra</h3><p>pago 100% seguro con tarjeta.</p></div>
-      <div class="passo"><div class="pic">📩</div><h3>Recibe el acceso</h3><p>la guía llega a tu correo al instante.</p></div>
-      <div class="passo"><div class="pic">📱</div><h3>Ábrela donde quieras</h3><p>en el celular, la computadora o imprímela.</p></div>
-      <div class="passo"><div class="pic">🔌</div><h3>Encuentra la señal</h3><p>sigue la ficha y sabe qué hacer hoy.</p></div>
     </div>
   </div>
 </section>
