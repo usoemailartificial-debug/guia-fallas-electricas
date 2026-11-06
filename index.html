@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía Visual de Fallas Eléctricas en Casa</title>
+<meta name="description" content="+50 fichas ilustradas para reconocer fallas eléctricas en casa: enchufe quemado, falso contacto, pastilla que se bota, cables calientes y fugas de corriente.">
+<meta property="og:title" content="Guía Visual de Fallas Eléctricas en Casa">
+<meta property="og:description" content="Reconoce la falla, entiende la causa y sabe qué hacer antes de que sea tarde. +50 fichas ilustradas.">
+<meta property="og:type" content="product">
+<meta property="og:image" content="assets/img/guia-capa.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230F1B2D'/%3E%3Cpath d='M58 8 22 58h24l-6 34 38-52H54z' fill='%23FFC400'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0F1B2D">
+<link rel="preload" as="style" href="assets/css/css2-82675b4c.css">
+<link rel="stylesheet" href="assets/css/css2-82675b4c.css" media="print" onload="this.media='all'">
+<style>
+:root{
+  --primary:#0F1B2D; --primary-2:#16263f; --primary-3:#22385a;
+  --gold:#FFC400; --gold-2:#FFD54A;
+  --coral:#E5372B; --coral-2:#ff6a4d;
+  --teal:#0e7e9c; --sky:#4aa8c4;
+  --ink:#16283d; --muted:#5a6b7d; --line:rgba(11,37,69,.13);
+  --lav:#eaf0f6; --peach:#f9f1e7; --mint:#e7f1f5; --pink:#fbf0e8; --white:#ffffff;
+  --fh:'Poppins',system-ui,sans-serif; --fb:'Inter',system-ui,sans-serif;
+  --r:20px; --rr:999px; --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--fb);color:var(--ink);background:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fh);margin:0;letter-spacing:-.02em;line-height:1.1}
+p{margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.sec{padding:clamp(52px,8vw,86px) 0}
+.center{text-align:center}
+.h2{font-weight:900;font-size:clamp(27px,5.2vw,48px);text-transform:uppercase}
+.grad-text{color:var(--gold-2)}
+.gold{color:var(--gold)} .coral{color:var(--coral)} .teal{color:var(--teal)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:clamp(16px,2.3vw,20px);color:#fff;text-decoration:none;padding:19px 34px;border:0;border-radius:var(--rr);cursor:pointer;
+  background:linear-gradient(100deg,#2fc85d,#17a046);box-shadow:0 14px 30px -8px rgba(23,160,70,.55);transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s;text-transform:uppercase;letter-spacing:.01em;width:100%;max-width:460px}
+.btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 20px 40px -8px rgba(23,160,70,.68)}
+.btn.gold{background:linear-gradient(100deg,#3ad06a,#1fab4c);color:#fff;box-shadow:0 14px 30px -8px rgba(23,160,70,.5)}
+.btn-sub{font-size:13.5px;color:var(--muted);margin-top:12px;font-family:var(--fb)}
+
+.topbar{position:sticky;top:0;z-index:50;background:var(--coral);color:#fff;text-align:center;font-family:var(--fh);font-weight:800;font-size:clamp(11px,2.4vw,14.5px);padding:11px 14px;letter-spacing:.02em}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 50% -10%,var(--primary-3),var(--primary-2) 45%,var(--primary) 100%);color:#fff;text-align:center;padding:clamp(46px,8vw,74px) 0 clamp(54px,8vw,82px)}
+.hero .blueprint{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.hero-in{position:relative;z-index:2}
+.pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-weight:700;font-size:13px;padding:8px 18px;border-radius:var(--rr);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;margin-bottom:20px}
+.hero h1{font-weight:900;font-size:clamp(25px,4.9vw,44px);max-width:700px;margin:0 auto}
+.hero .sub{font-size:clamp(16px,2.7vw,21px);color:rgba(255,255,255,.94);max-width:660px;margin:20px auto 0;font-weight:400}
+.hero .sub b{color:var(--gold-2);font-weight:700}
+.hero .btn-sub{color:rgba(255,255,255,.7)}
+.hero .btn{display:flex;margin:24px auto 0}
+.hero-photo{max-width:600px;margin:20px auto 2px;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -18px rgba(0,0,0,.55)}
+.hero-photo img{width:100%;height:auto;display:block;border-radius:22px}
+.wa-note{display:inline-flex;align-items:center;gap:9px;margin-top:14px;font-family:var(--fb);font-size:14px;font-weight:600;color:rgba(255,255,255,.96);background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.45);padding:9px 18px;border-radius:16px;max-width:360px;line-height:1.36;text-align:left}
+.wa-note svg{flex:none}
+.wa-note b{color:#5fe796;font-weight:800}
+.wa-note>span{display:block}
+@media(max-width:480px){.hero-photo{max-width:100%;border-radius:18px;margin-top:16px}.hero-photo img{border-radius:18px}.wa-note{font-size:12.5px;padding:8px 14px;gap:7px;max-width:300px}.hero{padding-top:24px}.pill{margin-bottom:16px}}
+.hero .selos{display:block;width:100%;max-width:440px;height:auto;margin:24px auto 0;opacity:.92}
+
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* DOR — fontes espalhadas */
+.dor{background:var(--lav)}
+.dor .lead{max-width:640px;margin:16px auto 0;color:var(--muted);font-size:clamp(15px,2.5vw,18px)}
+.scatter{max-width:820px;margin:34px auto 0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.scatter span{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 18px;font-size:14.5px;font-weight:600;color:var(--ink);box-shadow:0 8px 20px rgba(11,37,69,.06)}
+.scatter span i{font-style:normal;font-size:18px;opacity:.85}
+.scatter span:nth-child(2n){transform:rotate(-1.4deg)}
+.scatter span:nth-child(3n){transform:rotate(1.6deg)}
+.restart{max-width:560px;margin:26px auto 0;font-family:var(--fh);font-weight:800;font-size:clamp(17px,3vw,23px);color:var(--coral)}
+.dorfix{max-width:720px;margin:30px auto 0;background:var(--primary);color:#fff;border-radius:var(--r);padding:26px 28px;box-shadow:0 18px 40px -14px rgba(11,37,69,.5);font-size:clamp(15.5px,2.5vw,18px)}
+.dorfix b{color:var(--gold-2)}
+
+/* MECANISMO */
+.rota{background:var(--primary);color:#fff}
+.rota .h2{color:#fff}
+.rota .lead{max-width:680px;margin:16px auto 0;color:rgba(255,255,255,.82);font-size:clamp(15px,2.5vw,18px)}
+.rcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:24px;text-align:left;position:relative}
+.rcard .big{font-family:var(--fh);font-weight:900;font-size:44px;line-height:1;background:linear-gradient(120deg,var(--gold-2),var(--coral-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.rcard h3{font-size:17px;margin:10px 0 8px;color:#fff}
+.rcard p{font-size:14.5px;color:rgba(255,255,255,.8)}
+.bigidea{max-width:760px;margin:38px auto 0;border:1px dashed rgba(245,178,107,.5);border-radius:var(--r);padding:24px 26px;background:rgba(245,178,107,.07)}
+.bigidea .lbl{font-family:var(--fh);font-weight:800;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2)}
+.bigidea p{font-family:var(--fh);font-weight:900;font-size:clamp(20px,3.6vw,30px);margin-top:8px;line-height:1.16}
+.rota-photo{max-width:560px;margin:34px auto 0;border-radius:18px;overflow:hidden;box-shadow:0 26px 54px -18px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.16)}
+.rota-photo img{width:100%;height:auto;display:block}
+
+/* preview escuro */
+.prev{background:radial-gradient(120% 90% at 50% -10%,var(--primary-3),var(--primary-2) 45%,var(--primary) 100%);color:#fff}
+.prev .h2{color:#fff}
+.prev .lead{max-width:640px;margin:16px auto 0;color:rgba(255,255,255,.8);font-size:clamp(15px,2.5vw,17.5px)}
+
+/* bibliotecas */
+.libs{background:var(--peach)}
+.libcard{background:#fff;border-radius:var(--r);padding:24px 22px;text-align:left;border:1px solid var(--line);box-shadow:0 10px 26px rgba(11,37,69,.07);transition:transform .25s}
+.libcard:hover{transform:translateY(-4px)}
+.libcard .e{font-size:30px;line-height:1}
+.libcard .n{font-family:var(--fh);font-weight:800;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary-3);margin-top:12px}
+.libcard h3{font-size:18px;margin:5px 0 10px}
+.libcard .qt{display:inline-flex;align-items:center;gap:6px;font-family:var(--fh);font-weight:800;font-size:12.5px;color:#fff;background:linear-gradient(100deg,var(--coral),var(--gold));padding:5px 12px;border-radius:var(--rr)}
+.libcard p{font-size:13.8px;color:var(--muted);margin-top:11px}
+.libtotal{max-width:620px;margin:26px auto 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.libtotal b{font-family:var(--fh);font-weight:800;font-size:14px;background:var(--primary);color:#fff;padding:11px 20px;border-radius:var(--rr)}
+.libs-photo{max-width:520px;margin:34px auto 0;border-radius:18px;overflow:hidden;box-shadow:0 22px 46px -16px rgba(11,37,69,.42);border:1px solid var(--line)}
+.libs-photo img{width:100%;height:auto;display:block}
+
+/* ficha (o que cada projeto traz) */
+.tem{background:#fff}
+.tem-list{max-width:900px;margin:38px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}
+@media(max-width:640px){.tem-list{grid-template-columns:1fr}}
+.temi{display:flex;gap:14px;align-items:center;background:var(--lav);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.temi .e{font-size:25px;flex:0 0 auto}
+.temi b{font-family:var(--fh);font-weight:700;font-size:15px}
+.tem-photo{max-width:600px;margin:34px auto 0;border-radius:18px;overflow:hidden;box-shadow:0 22px 46px -16px rgba(11,37,69,.4)}
+.tem-photo img{width:100%;height:auto;display:block}
+
+/* urgência */
+.urg{background:var(--gold);color:var(--primary);text-align:center;padding:clamp(48px,7vw,66px) 20px}
+.urg h2{color:var(--primary);text-transform:uppercase;font-weight:900;font-size:clamp(24px,4.8vw,42px);max-width:26ch;margin:0 auto;line-height:1.12}
+.urg .btn{background:linear-gradient(100deg,#2fc85d,#17a046);color:#fff;margin-top:26px;box-shadow:0 14px 30px -8px rgba(0,0,0,.22)}
+
+/* ideal pra você */
+.win{background:var(--mint)}
+.wincard{background:#fff;border-radius:var(--r);border:1px solid var(--line);box-shadow:0 10px 26px rgba(11,37,69,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:13px;padding:24px 18px;transition:transform .25s ease,box-shadow .25s ease}
+.wincard:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(11,37,69,.11)}
+.wincard .ic{width:58px;height:58px;font-size:29px;line-height:1;display:flex;align-items:center;justify-content:center;border-radius:var(--rr);background:linear-gradient(135deg,var(--peach),var(--lav));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 6px 14px rgba(11,37,69,.08)}
+.wincard h3{margin:0;font-family:var(--fh);font-weight:700;text-transform:uppercase;letter-spacing:.4px;font-size:14.5px;line-height:1.22;color:var(--ink);text-wrap:balance}
+@media(max-width:560px){.wincard{padding:20px 16px;gap:12px}.wincard .ic{width:52px;height:52px;font-size:27px}.wincard h3{font-size:15px}}
+
+/* tudo organizado */
+.org{background:var(--primary);color:#fff}
+.org .h2{color:#fff}
+.org-mock{max-width:420px;margin:34px auto 6px}
+.org-mock img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 26px 54px -18px rgba(0,0,0,.55)}
+.orglist{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;max-width:820px;margin:30px auto 0;text-align:left}
+.orglist li{display:flex;gap:11px;font-size:15px;align-items:flex-start}
+.orglist li .c{color:var(--gold-2);flex:0 0 auto;font-weight:800}
+@media(max-width:600px){.orglist{grid-template-columns:1fr;max-width:460px}}
+
+/* bônus */
+.bonus{background:var(--primary);color:#fff}
+.bonus .h2{color:#fff}
+.bonsub{font-family:var(--fh);font-style:italic;font-weight:600;font-size:clamp(16px,2.6vw,20px);color:var(--gold-2);margin:0 0 6px;letter-spacing:.01em}
+.boncard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:24px;text-align:left;position:relative}
+.boncard .tag{position:absolute;top:-11px;left:20px;background:var(--gold);color:#1a1300;font-family:var(--fh);font-weight:800;font-size:12px;padding:5px 13px;border-radius:var(--rr)}
+.boncard .bonimg{aspect-ratio:5/4;margin:8px 0 18px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#fff}
+.boncard .bonimg img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.boncard h3{color:#fff;font-size:17.5px;margin:8px 0 8px}
+.boncard p{font-size:14px;color:rgba(255,255,255,.82)}
+.boncard .val{margin-top:14px;display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.1);padding:6px 12px;border-radius:var(--rr);font-size:13px}
+.boncard .val s{opacity:.6;font-weight:600;margin-right:3px}
+.boncard .val b{color:#5fe39a}
+
+/* planos */
+.planos{background:linear-gradient(180deg,#fff,var(--lav))}
+.plans{display:grid;grid-template-columns:1fr 1.05fr;gap:20px;max-width:920px;margin:38px auto 0;align-items:stretch}
+@media(max-width:760px){.plans{grid-template-columns:1fr}}
+.plan{background:#fff;border-radius:var(--r);padding:30px 26px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(11,37,69,.09);display:flex;flex-direction:column}
+.plan.feat{background:radial-gradient(120% 100% at 50% 0,var(--primary-3),var(--primary-2) 60%,var(--primary));color:#fff;position:relative;border:0;box-shadow:0 22px 50px -10px rgba(11,37,69,.55)}
+.plan .pn{font-family:var(--fh);font-weight:900;font-size:22px;text-align:center;text-transform:uppercase}
+.plan .planimg{margin:14px 0 6px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:#fff}
+.plan:not(.feat) .planimg{border-color:var(--line)}
+.plan .planimg img{width:100%;height:auto;display:block}
+.plan.feat .pn{color:#fff}
+.feat .fbadge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1a1300;font-family:var(--fh);font-weight:800;font-size:12.5px;padding:7px 18px;border-radius:var(--rr);white-space:nowrap;box-shadow:0 8px 20px rgba(224,138,46,.42)}
+.plist{list-style:none;margin:18px 0;padding:0;display:flex;flex-direction:column;gap:11px;flex:1}
+.plist li{display:flex;gap:10px;font-size:14.5px;line-height:1.35}
+.plist li .c{color:var(--teal);flex:0 0 auto;font-weight:800}
+.plan.feat .plist li .c{color:var(--gold-2)}
+.price{text-align:center;margin:6px 0 4px}
+.price .de{font-size:14px;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--coral)}
+.plan.feat .price .de{color:rgba(255,255,255,.6)}
+.price .big{font-family:var(--fh);font-weight:900;font-size:clamp(52px,14vw,70px);line-height:1.05;color:var(--coral)}
+.plan.feat .price .big{color:#fff}
+.price .par{font-size:13.5px;color:var(--muted)}
+.plan.feat .price .par{color:rgba(255,255,255,.8)}
+.econ{text-align:center;font-size:13px;margin-bottom:16px}
+.econ b{color:var(--coral)} .plan.feat .econ b{color:var(--gold-2)}
+.pc-anim{transform-origin:center center;animation:pulse-soft 2s ease-in-out infinite;will-change:transform;display:inline-block}
+@keyframes pulse-soft{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.pc-anim{animation:none}}
+.pay{display:flex;gap:10px;justify-content:center;align-items:center;margin-top:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.plan.feat .pay{color:rgba(255,255,255,.75)}
+.planbanner{margin:22px -26px -30px;border-radius:0 0 19px 19px;overflow:hidden;line-height:0}
+.planbanner img{width:100%;height:auto;display:block}
+.plans-badge{display:inline-block;font-family:var(--fh);font-weight:800;font-size:.82rem;letter-spacing:.04em;color:#fff;background:#e4483b;padding:9px 20px;border-radius:var(--rr);box-shadow:0 8px 22px rgba(228,72,59,.3);margin-bottom:16px}
+.planos .h2{margin-bottom:14px}
+.plans-lead{max-width:660px;margin:0 auto 18px;color:var(--muted);font-size:1.06rem;line-height:1.6}
+.plans-lead b{color:var(--ink)}
+.scarcity{display:flex;align-items:center;gap:16px;max-width:920px;margin:0 auto 26px;background:#e4483b;color:#fff;border-radius:var(--r);padding:18px 22px;box-shadow:0 14px 34px rgba(228,72,59,.3)}
+.scarcity-ic{font-size:2rem;line-height:1;flex-shrink:0}
+.scarcity-tx{display:flex;flex-direction:column;gap:4px;text-align:left}
+.scarcity-tx b{font-family:var(--fh);font-weight:800;font-size:1.02rem;line-height:1.3}
+.scarcity-tx span{font-size:.95rem;line-height:1.5;color:rgba(255,255,255,.94)}
+.scarcity-tx span b{font-family:var(--fb);font-weight:800;font-size:inherit;color:var(--gold-2)}
+@media(max-width:640px){.plans-lead{font-size:.98rem}.scarcity{gap:12px;padding:16px;margin-bottom:22px}.scarcity-ic{font-size:1.7rem}.scarcity-tx b{font-size:.96rem}.scarcity-tx span{font-size:.9rem}}
+.paygrid{display:flex;flex-direction:column;align-items:center;gap:9px;margin:26px auto 0}
+.paygrid span{font-size:12.5px;color:var(--muted);font-weight:600}
+.paygrid img{width:100%;max-width:250px;height:auto}
+
+/* garantia */
+.gar{background:var(--peach)}
+.garwrap{max-width:820px;margin:0 auto;display:flex;gap:28px;align-items:center;text-align:left}
+@media(max-width:640px){.garwrap{flex-direction:column;text-align:center}}
+.gar h2{font-size:clamp(22px,4.2vw,36px)}
+.gar p{color:var(--muted);margin-top:12px;font-size:15px;max-width:520px}
+.gseal{width:150px;height:auto;flex:0 0 auto;filter:drop-shadow(0 12px 26px rgba(11,37,69,.22))}
+
+/* passos */
+.passos{background:#fff}
+.passo{text-align:center}
+.passo h3{font-size:16px;margin-bottom:5px}
+.passo p{font-size:13.5px;color:var(--muted)}
+.passo .pic{width:66px;height:66px;object-fit:contain;margin:0 auto 12px;display:block;filter:drop-shadow(0 8px 16px rgba(11,37,69,.18))}
+
+/* faq */
+.faq{background:var(--lav)}
+.q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:12px}
+.q summary{font-family:var(--fh);font-weight:700;font-size:15.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.q summary::-webkit-details-marker{display:none}
+.q summary:after{content:"+";font-size:22px;color:var(--coral);flex:0 0 auto;transition:transform .2s}
+.q[open] summary:after{transform:rotate(45deg)}
+.q p{margin-top:12px;font-size:14.5px;color:var(--muted)}
+
+footer{background:var(--primary);color:rgba(255,255,255,.6);text-align:center;padding:34px 20px;font-size:12.5px}
+footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margin-bottom:8px}
+
+/* carrossel marquee */
+.marquee{max-width:1120px;margin:34px auto 0;overflow:hidden;position:relative}
+.mqtrack{display:flex;gap:18px;width:max-content;will-change:transform}
+.mqitem{flex:0 0 auto;width:clamp(238px,60vw,300px)}
+.mqitem img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 22px 46px -16px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.16)}
+
+/* ===== Fallas Eléctricas: extras ===== */
+.mock-hero{position:relative;width:100%;max-width:520px;height:clamp(330px,82vw,520px);margin:26px auto 6px}
+.mock-hero img{position:absolute;top:50%;width:auto;height:88%;border-radius:12px;box-shadow:0 28px 54px -16px rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.18)}
+.mock-hero .mh-c{left:50%;height:96%;transform:translate(-50%,-50%);z-index:3}
+.mock-hero .mh-l{left:4%;transform:translateY(-50%) rotate(-9deg);z-index:1;opacity:.95}
+.mock-hero .mh-r{right:4%;transform:translateY(-50%) rotate(9deg);z-index:2;opacity:.95}
+.mh-seal{position:absolute;right:2%;bottom:2%;z-index:4;width:92px;height:92px;border-radius:50%;background:var(--gold);color:#0F1B2D;font-family:var(--fh);font-weight:900;font-size:12.5px;line-height:1.15;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 10px 24px rgba(0,0,0,.4);transform:rotate(-10deg)}
+.hero-bul{list-style:none;padding:0;margin:18px auto 0;display:flex;flex-direction:column;gap:8px;max-width:440px;text-align:left;font-size:clamp(15px,2.6vw,17px);font-weight:600}
+.strip{background:var(--gold);color:var(--primary);text-align:center;font-family:var(--fh);font-weight:900;font-size:clamp(14px,2.8vw,19px);padding:16px 18px;text-transform:uppercase;line-height:1.3}
+.strip span{display:block;font-weight:700;font-size:.8em;text-transform:none}
+.tem-photo.two{display:flex;gap:16px;justify-content:center;box-shadow:none;max-width:640px}
+.tem-photo.two img{width:48%;border-radius:14px;box-shadow:0 22px 46px -16px rgba(11,37,69,.4)}
+.bene{background:var(--lav)}
+.bene .lead,.prev .lead{max-width:640px;margin:16px auto 0;font-size:clamp(15px,2.5vw,17.5px)}
+.bene .lead{color:var(--muted)}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 10px 26px rgba(11,37,69,.06)}
+.bcard h3{font-size:18px;margin-bottom:10px}
+.bcard p{font-size:15px;color:var(--muted)}
+.agi{background:#fff}
+.agitext{max-width:720px;margin:26px auto 0;text-align:left;display:flex;flex-direction:column;gap:14px;font-size:clamp(15.5px,2.5vw,18px)}
+.agitext b{color:var(--primary)}
+.agibox{max-width:520px;margin:28px auto 26px;background:var(--primary);color:#fff;border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:6px}
+.agibox b{font-family:var(--fh);font-size:18px}.agibox span{color:var(--gold-2);font-weight:700}
+.urgp{max-width:640px;margin:16px auto 0;font-size:clamp(15px,2.5vw,18px);color:var(--primary);font-weight:500}
+.rota-photo,.libs-photo{max-width:380px}
+.mock-bundle{position:relative;width:100%;max-width:560px;height:clamp(250px,62vw,400px);margin:34px auto 6px}
+.mock-bundle img{position:absolute;bottom:0;height:78%;width:auto;border-radius:10px;box-shadow:0 22px 44px -14px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.16)}
+.mock-bundle .mbc{left:50%;height:100%;transform:translateX(-50%);z-index:5}
+.mock-bundle .mb1{left:0;transform:rotate(-8deg);z-index:1}
+.mock-bundle .mb2{left:14%;transform:rotate(-4deg);z-index:2;height:86%}
+.mock-bundle .mb3{right:14%;transform:rotate(4deg);z-index:2;height:86%}
+.mock-bundle .mb4{right:0;transform:rotate(8deg);z-index:1}
+.mock-bundle.small{height:240px;margin:16px auto 4px}
+.planimg.plain{max-width:220px;margin:14px auto 6px;border:0;background:none}
+.planimg.plain img{border-radius:10px;box-shadow:0 16px 32px -12px rgba(11,37,69,.45)}
+.upwarn{margin-top:16px;text-align:center;font-size:13.5px;font-weight:700;color:var(--coral)}
+.bonwarn{color:rgba(255,255,255,.75);font-size:14px;margin-top:10px}
+.boncard .bonimg{aspect-ratio:3/4;background:#0F1B2D}
+.boncard .bonimg img{object-fit:contain}
+.boncard .val b{color:var(--gold-2)}
+.bontotal{max-width:620px;margin:30px auto 0;background:var(--gold);color:var(--primary);border-radius:var(--rr);padding:14px 22px;font-family:var(--fh);font-weight:800;font-size:clamp(14px,2.6vw,17px)}
+.bontotal s{opacity:.7}
+.gseal-css{flex:0 0 auto;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,var(--gold-2),var(--gold));border:6px solid var(--primary);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--primary);font-family:var(--fh);text-align:center;box-shadow:0 12px 26px rgba(11,37,69,.25)}
+.gseal-css b{font-size:56px;line-height:1;font-weight:900}.gseal-css span{font-size:12px;font-weight:800;line-height:1.15}
+.passo .pic{font-size:40px;line-height:66px;width:66px;height:66px;margin:0 auto 12px;border-radius:50%;background:var(--lav)}
+.paygrid span{text-align:center}
+.fmini{margin:10px auto 0;max-width:640px}
+.btn{color:#fff}
+@media(max-width:480px){.mock-hero .mh-l{left:-2%}.mock-hero .mh-r{right:-2%}.mh-seal{width:76px;height:76px;font-size:11px}.mock-bundle.small{height:200px}}
+</style>
+<!-- PIXEL: pegar aquí el código del píxel de Meta -->
+</head>
+<body>
+
+<div class="topbar">⚡ OFERTA DE LANZAMIENTO DISPONIBLE SOLO HOY <span id="oferta-data"></span> · 🔒 COMPRA 100% SEGURA</div>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="blueprint" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="bp" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"></path></pattern>
+      <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFC400" stop-opacity=".45"></stop><stop offset="100%" stop-color="#FFC400" stop-opacity="0"></stop></radialGradient>
+    </defs>
+    <rect width="1200" height="600" fill="url(#bp)"></rect>
+    <g fill="none" stroke="#FFC400" stroke-opacity=".18" stroke-width="2"><path d="M0 120H160V60H260"/><circle cx="260" cy="60" r="6"/><path d="M1200 140H1050V80H960"/><circle cx="960" cy="80" r="6"/><path d="M0 480H120V540H220"/><circle cx="220" cy="540" r="6"/></g>
+    <circle cx="180" cy="120" r="120" fill="url(#glow)" opacity=".4"></circle>
+    <circle cx="1030" cy="150" r="100" fill="url(#glow)" opacity=".3"></circle>
+  </svg>
+  <div class="wrap hero-in">
+    <span class="pill">🔌 ¿QUÉ ESTÁS VIENDO EN TU CASA?</span>
+    <h1>RECONOCE CUALQUIER FALLA ELÉCTRICA EN CASA CON <span class="grad-text">+50 FICHAS VISUALES</span> ANTES DE QUE SE CONVIERTA EN UN INCENDIO</h1>
+    <p class="sub">Compara <b>enchufes quemados, falsos contactos, pastillas que se botan, cables calientes y fugas de corriente</b> para saber qué estás viendo, cuál es la causa más probable y qué hacer primero.</p>
+    <div class="mock-hero" aria-label="Vista de la guía y sus fichas">
+      <img class="mh-l" src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha Enchufe quemado">
+      <img class="mh-r" src="assets/img/f15-pastilla.webp" width="386" height="517" alt="Ficha La pastilla se bota sola">
+      <img class="mh-c" src="assets/img/guia-capa.webp" width="386" height="517" alt="Portada de la Guía Visual de Fallas Eléctricas en Casa" fetchpriority="high">
+      <span class="mh-seal">ACCESO<br>INMEDIATO</span>
+    </div>
+    <ul class="hero-bul">
+      <li>✅ +50 fichas ilustradas para consulta rápida</li>
+      <li>✅ Compara fallas que parecen iguales</li>
+      <li>✅ Nivel de atención 🟢🟡🔴 en cada ficha</li>
+    </ul>
+    <a href="#planos" class="btn" data-pv-cta="">QUIERO LA GUÍA AHORA</a>
+    <div class="wa-note"><span>📩 Recibes todo <b>al instante</b> en tu <b>correo electrónico</b></span></div>
+  </div>
+</section>
+
+<!-- HECHO PARA -->
+<div class="strip">HECHO PARA QUIEN QUIERE CUIDAR SU CASA Y A SU FAMILIA <span>(y para quien trabaja con electricidad)</span></div>
+
+<!-- POR DENTRO -->
+<section class="sec prev center">
+  <div class="wrap">
+    <h2 class="h2">📖 MIRA LA GUÍA POR DENTRO</h2>
+    <p class="lead">Cada ficha es visual y va directo al punto: qué estás viendo, la causa probable, cómo diferenciarla de otra falla parecida, qué revisar y cuándo es urgente.</p>
+    <div class="marquee" data-speed="40">
+      <div class="mqtrack">
+        <div class="mqitem"><img src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha 01 Enchufe quemado"></div>
+        <div class="mqitem"><img src="assets/img/p02-mapa.webp" width="386" height="517" alt="Mapa rápido de señales"></div>
+        <div class="mqitem"><img src="assets/img/f08-falso-contacto.webp" width="386" height="517" alt="Ficha 08 Falso contacto"></div>
+        <div class="mqitem"><img src="assets/img/p03-semaforo.webp" width="386" height="517" alt="El semáforo de atención"></div>
+        <div class="mqitem"><img src="assets/img/f15-pastilla.webp" width="386" height="517" alt="Ficha 15 La pastilla se bota sola"></div>
+        <div class="mqitem"><img src="assets/img/f24-luces.webp" width="386" height="517" alt="Ficha 24 Luces que parpadean"></div>
+        <div class="mqitem"><img src="assets/img/f30-fuga.webp" width="386" height="517" alt="Ficha 30 Fuga de corriente"></div>
+        <div class="mqitem"><img src="assets/img/f36-tierra.webp" width="386" height="517" alt="Ficha 36 Sin puesta a tierra"></div>
+        <div class="mqitem"><img src="assets/img/p53-chequeo.webp" width="386" height="517" alt="Chequeo rápido en casa"></div>
+      </div>
+    </div>
+    <a href="#planos" class="btn" data-pv-cta="" style="margin-top:34px">QUIERO VER TODAS LAS FICHAS</a>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="sec dor center">
+  <div class="wrap">
+    <h2 class="h2">HOY LA RESPUESTA QUE NECESITAS ESTÁ REGADA EN SEIS LUGARES</h2>
+    <div class="scatter">
+      <span><i>▶️</i>un video de YouTube</span>
+      <span><i>💬</i>el consejo del vecino</span>
+      <span><i>📱</i>un grupo de WhatsApp</span>
+      <span><i>🔍</i>una búsqueda en Google</span>
+      <span><i>🧑‍🔧</i>un electricista que no te explica</span>
+      <span><i>🤷</i>"seguro no es nada"</span>
+    </div>
+    <p class="restart">Y cuando aparece otra falla, la búsqueda empieza de nuevo.</p>
+    <div class="dorfix">La Guía Visual junta todo en un solo lugar. En vez de buscar desde cero, <b>empiezas por lo que estás viendo en tu casa</b>.</div>
+  </div>
+</section>
+
+<!-- MECANISMO -->
+<section class="sec rota center">
+  <div class="wrap">
+    <p class="bonsub">El método</p>
+    <h2 class="h2">CONSULTA POR SEÑAL</h2>
+    <div class="grid g4" style="margin-top:38px">
+      <div class="rcard"><div class="big">01</div><h3>Lo que ves</h3><p>Olor a quemado, chispa, calor, una luz que parpadea. Empiezas por la señal, no por el nombre técnico.</p></div>
+      <div class="rcard"><div class="big">02</div><h3>El bloque correcto</h3><p>El Mapa Rápido te lleva a uno de los 6 bloques: enchufes, cables, tablero, iluminación, fugas o instalación.</p></div>
+      <div class="rcard"><div class="big">03</div><h3>La ficha más parecida</h3><p>Comparas la imagen con lo que tienes delante y encuentras la falla más probable.</p></div>
+      <div class="rcard"><div class="big">04</div><h3>Causa, qué revisar y qué hacer</h3><p>La ficha te dice la causa, qué verificar, el nivel de atención y el próximo paso.</p></div>
+    </div>
+    <div class="bigidea">
+      <div class="lbl">La gran idea</div>
+      <p>Deja de buscar la falla en Google. Empieza por lo que estás viendo.</p>
+    </div>
+    <div class="rota-photo"><img src="assets/img/p02-mapa.webp" width="386" height="517" loading="lazy" alt="Página de la guía: Mapa rápido de señales"></div>
+  </div>
+</section>
+
+<!-- BLOQUES -->
+<section class="sec libs center">
+  <div class="wrap">
+    <h2 class="h2">LOS 6 BLOQUES DE LA GUÍA</h2>
+    <div class="grid g3" style="margin-top:38px">
+      <div class="libcard"><div class="e">🔌</div><div class="n">Bloque 01</div><h3>Enchufes y tomacorrientes</h3><span class="qt">7 fichas + comparación</span><p>Enchufe quemado, caliente, flojo, que da chispa o que no tiene energía.</p></div>
+      <div class="libcard"><div class="e">🧵</div><div class="n">Bloque 02</div><h3>Cables y olor a quemado</h3><span class="qt">7 fichas + comparación</span><p>Falso contacto, cable que se calienta, empalmes mal hechos y cables dañados.</p></div>
+      <div class="libcard"><div class="e">🎛️</div><div class="n">Bloque 03</div><h3>Tablero y pastillas</h3><span class="qt">9 fichas + comparación</span><p>Pastilla que se bota, diferencial que salta, tablero caliente o desordenado.</p></div>
+      <div class="libcard"><div class="e">💡</div><div class="n">Bloque 04</div><h3>Iluminación</h3><span class="qt">6 fichas + comparación</span><p>Luces que parpadean, focos que se queman seguido, interruptores que calientan.</p></div>
+      <div class="libcard"><div class="e">⚡</div><div class="n">Bloque 05</div><h3>Fugas y descargas</h3><span class="qt">6 fichas + comparación</span><p>Te da corriente, el medidor avanza con todo apagado, el recibo sube sin razón.</p></div>
+      <div class="libcard"><div class="e">🏠</div><div class="n">Bloque 06</div><h3>Errores de instalación</h3><span class="qt">7 fichas + comparación</span><p>Sin puesta a tierra, regletas en cadena, cable delgado, pastilla equivocada.</p></div>
+    </div>
+    <div class="libtotal"><b>6 bloques</b><b>+50 fichas ilustradas</b><b>Todo en el mismo formato</b></div>
+  </div>
+</section>
+
+<!-- CADA FICHA -->
+<section class="sec tem center">
+  <div class="wrap">
+    <h2 class="h2">LO QUE TRAE CADA FICHA</h2>
+    <div class="tem-list">
+      <div class="temi"><span class="e">👁️</span><b>¿Qué estás viendo? Las señales que identifican la falla.</b></div>
+      <div class="temi"><span class="e">🖼️</span><b>Ilustración con las señales marcadas para comparar.</b></div>
+      <div class="temi"><span class="e">🔎</span><b>Causas más probables, en orden.</b></div>
+      <div class="temi"><span class="e">⚖️</span><b>Comparación: ¿es esto o aquello? (ej. falso contacto o sobrecarga).</b></div>
+      <div class="temi"><span class="e">☑️</span><b>Qué verificar, con preguntas simples.</b></div>
+      <div class="temi"><span class="e">🚦</span><b>Nivel de atención: verde, ámbar o rojo.</b></div>
+      <div class="temi"><span class="e">➡️</span><b>Próximo paso: qué hacer ahora mismo.</b></div>
+      <div class="temi"><span class="e">🧑‍🔧</span><b>Cuándo llamar a un electricista sin dudar.</b></div>
+    </div>
+    <div class="tem-photo two"><img src="assets/img/p01-como-usar.webp" width="386" height="517" loading="lazy" alt="Cómo usar esta guía"><img src="assets/img/f08-falso-contacto.webp" width="386" height="517" loading="lazy" alt="Ficha Falso contacto"></div>
+  </div>
+</section>
+
+<!-- O QUE FAZ POR VOCÊ -->
+<section class="sec bene center">
+  <div class="wrap">
+    <h2 class="h2">LO QUE ESTA GUÍA HACE POR TI</h2>
+    <p class="lead">Encuentra la señal, compárala y entiende qué está pasando y qué revisar.</p>
+    <div class="grid g2" style="margin-top:34px;text-align:left">
+      <div class="bcard"><h3>🔌 Reconocer la falla</h3><p>Comparas color, olor, calor, ruido y dónde aparece el problema para reconocer enchufes quemados, falsos contactos, cables recalentados, pastillas que se botan y fugas de corriente.</p></div>
+      <div class="bcard"><h3>⚖️ Diferenciar fallas parecidas</h3><p>Ves las señales que separan problemas que parecen iguales: falso contacto o sobrecarga, sobrecarga o cortocircuito, consumo oculto o fuga, una luz o toda la casa.</p></div>
+      <div class="bcard"><h3>🔎 Entender la causa y qué revisar</h3><p>Sabes si el problema viene de un tornillo flojo, un empalme mal hecho, un cable delgado, humedad o un aparato, y qué preguntas hacerte antes de tocar nada.</p></div>
+      <div class="bcard"><h3>🚦 Saber si es urgente</h3><p>El semáforo te dice si puedes observar, si tienes que corregir esta semana o si debes cortar la energía hoy mismo, y cuál es el próximo paso.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGITAÇÃO -->
+<section class="sec agi center">
+  <div class="wrap">
+    <p class="bonsub">⚡ Oferta especial para quien quiere una casa más segura</p>
+    <h2 class="h2">NO NECESITAS SER ELECTRICISTA. NECESITAS SABER <span class="coral">QUÉ ESTÁS VIENDO Y QUÉ HACER PRIMERO</span></h2>
+    <div class="agitext">
+      <p>Hueles a quemado y no sabes de dónde viene. La pastilla se bota y la vuelves a subir, una y otra vez. El enchufe de la cocina está tibio y lo sigues usando. Una luz parpadea desde hace semanas. El recibo de luz llegó más alto y nadie en casa sabe por qué.</p>
+      <p>No sabes si es algo sin importancia o el comienzo de un incendio. Buscas en Google, ves videos que se contradicen y el electricista te cobra sin explicarte nada.</p>
+      <p><b>El 99% de las personas no sabe reconocer un falso contacto… hasta que se incendia.</b> Y lo peor: <b>la pastilla y el diferencial no te protegen de esto</b>, porque un falso contacto calienta sin hacer saltar nada.</p>
+      <p>Lo que necesitas es algo listo, visual y ordenado, para abrir en el celular en el momento en que ves la señal.</p>
+    </div>
+    <div class="agibox"><b>Guía completa con +50 fichas ilustradas</b><span>Ver → Comparar → Reconocer → Actuar</span></div>
+    <a href="#planos" class="btn" data-pv-cta="">QUIERO ACCEDER A LA GUÍA AHORA →</a>
+  </div>
+</section>
+
+<!-- URGÊNCIA -->
+<section class="urg">
+  <div class="wrap">
+    <h2>Cuanto antes reconozcas la señal, menos riesgo corres</h2>
+    <p class="urgp">Un cable que se calienta en silencio, un enchufe que se derrite dentro de la pared o una fuga que da corriente no avisan dos veces. Reconocer la falla a tiempo es la diferencia entre cambiar un tomacorriente o perder una habitación.</p>
+    <a href="#planos" class="btn" data-pv-cta="">QUIERO CONSULTAR POR LA SEÑAL</a>
+  </div>
+</section>
+
+<!-- IDEAL -->
+<section class="sec win center">
+  <div class="wrap">
+    <h2 class="h2">IDEAL PARA TI SI…</h2>
+    <div class="grid g3" style="margin-top:38px">
+      <div class="wincard"><div class="ic">🏠</div><h3>Tienes dudas cada vez que algo eléctrico falla en casa</h3></div>
+      <div class="wincard"><div class="ic">🏚️</div><h3>Vives en una casa o departamento con instalación antigua</h3></div>
+      <div class="wincard"><div class="ic">👨‍👩‍👧</div><h3>Tienes niños o adultos mayores en casa</h3></div>
+      <div class="wincard"><div class="ic">🔑</div><h3>Alquilas o vas a comprar una vivienda</h3></div>
+      <div class="wincard"><div class="ic">🧰</div><h3>Eres técnico o electricista y quieres una referencia visual</h3></div>
+      <div class="wincard"><div class="ic">💵</div><h3>Quieres pagar lo justo y que no te engañen</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- TUDO -->
+<section class="sec org center">
+  <div class="wrap">
+    <h2 class="h2">TODO EN UN SOLO LUGAR, EN EL MISMO FORMATO</h2>
+    <div class="mock-bundle">
+      <img class="mb1" src="assets/img/bono1.webp" width="448" height="600" loading="lazy" alt="Bono 1">
+      <img class="mb2" src="assets/img/bono2.webp" width="448" height="600" loading="lazy" alt="Bono 2">
+      <img class="mb3" src="assets/img/bono3.webp" width="448" height="600" loading="lazy" alt="Bono 3">
+      <img class="mb4" src="assets/img/bono4.webp" width="448" height="600" loading="lazy" alt="Bono 4">
+      <img class="mbc" src="assets/img/guia-capa.webp" width="386" height="517" loading="lazy" alt="Guía Visual de Fallas Eléctricas en Casa">
+    </div>
+    <ul class="orglist">
+      <li><span class="c">✓</span> 6 bloques organizados por señal</li>
+      <li><span class="c">✓</span> +50 fichas ilustradas</li>
+      <li><span class="c">✓</span> Mapa rápido para encontrar tu falla</li>
+      <li><span class="c">✓</span> Semáforo de atención en cada ficha</li>
+      <li><span class="c">✓</span> Comparaciones entre fallas parecidas</li>
+      <li><span class="c">✓</span> Causas más probables</li>
+      <li><span class="c">✓</span> Qué verificar antes de tocar nada</li>
+      <li><span class="c">✓</span> Próximo paso en cada ficha</li>
+      <li><span class="c">✓</span> Enchufes, cables y tablero</li>
+      <li><span class="c">✓</span> Iluminación, fugas y descargas</li>
+      <li><span class="c">✓</span> Errores de instalación</li>
+      <li><span class="c">✓</span> Chequeo rápido de 15 minutos</li>
+      <li><span class="c">✓</span> Cuándo llamar a un electricista</li>
+      <li><span class="c">✓</span> Abre en el celular o imprímela</li>
+    </ul>
+  </div>
+</section>
+
+<!-- BÔNUS -->
+<section class="sec bonus center">
+  <div class="wrap">
+    <p class="bonsub">…y no termina aquí</p>
+    <h2 class="h2">EN EL PLAN COMPLETO TE LLEVAS 4 BONOS</h2>
+    <p class="bonwarn">(disponibles solo hoy · si compras después, no los recibes)</p>
+    <div class="grid g2" style="margin-top:40px">
+      <div class="boncard"><span class="tag">🎁 BONO 1</span><div class="bonimg"><img src="assets/img/bono1.webp" width="448" height="600" loading="lazy" alt="Plan de Emergencia Eléctrica"></div>
+        <h3>Plan de Emergencia Eléctrica</h3><p>Qué hacer en los primeros minutos ante un cortocircuito, un incendio eléctrico, una descarga o un cable caído. Incluye tarjeta de emergencia para imprimir y pegar junto al tablero.</p>
+        <div class="val"><s>US$ 9,90</s> <b>HOY GRATIS</b></div></div>
+      <div class="boncard"><span class="tag">🎁 BONO 2</span><div class="bonimg"><img src="assets/img/bono2.webp" width="448" height="600" loading="lazy" alt="Mapa de tu Tablero"></div>
+        <h3>Mapa de tu Tablero</h3><p>Paso a paso para identificar qué controla cada pastilla en 20 minutos, con plantilla imprimible y etiquetas para recortar. En una emergencia sabes cuál bajar en segundos.</p>
+        <div class="val"><s>US$ 7,90</s> <b>HOY GRATIS</b></div></div>
+      <div class="boncard"><span class="tag">🎁 BONO 3</span><div class="bonimg"><img src="assets/img/bono3.webp" width="448" height="600" loading="lazy" alt="Que no te engañen"></div>
+        <h3>Que no te engañen</h3><p>8 preguntas para hacerle al electricista, tabla para comparar presupuestos, señales de trabajo mal hecho y checklist para revisar antes de pagar.</p>
+        <div class="val"><s>US$ 12,90</s> <b>HOY GRATIS</b></div></div>
+      <div class="boncard"><span class="tag">🎁 BONO 4</span><div class="bonimg"><img src="assets/img/bono4.webp" width="448" height="600" loading="lazy" alt="Tabla de Consumo y Fugas"></div>
+        <h3>Tabla de Consumo y Fugas</h3><p>Cuánto gasta cada aparato, cómo calcular tu consumo y la prueba del medidor para descubrir si tu casa pierde electricidad y en qué circuito.</p>
+        <div class="val"><s>US$ 9,90</s> <b>HOY GRATIS</b></div></div>
+    </div>
+    <div class="bontotal">Valor total de los bonos: <s>US$ 40,60</s> → <b>GRATIS en el Plan Completo</b></div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="sec planos" id="planos">
+  <div class="wrap center">
+    <span class="plans-badge">⏰ OFERTA DE LANZAMIENTO POR TIEMPO LIMITADO</span>
+    <h2 class="h2">ELIGE TU PLAN</h2>
+  </div>
+  <div class="wrap">
+    <div class="scarcity">
+      <span class="scarcity-ic">⏳</span>
+      <div class="scarcity-tx">
+        <b>Precio de lanzamiento: puede subir en cualquier momento.</b>
+        <span>Los <b>4 bonos</b> del Plan Completo están liberados solo en esta condición. Pagas una vez y es tuyo para siempre.</span>
+      </div>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="pn">PLAN BÁSICO</div>
+        <div class="planimg plain"><img src="assets/img/guia-capa.webp" width="386" height="517" loading="lazy" alt="Guía Visual de Fallas Eléctricas en Casa"></div>
+        <ul class="plist">
+          <li><span class="c">✓</span> Guía Visual de Fallas Eléctricas en Casa</li>
+          <li><span class="c">✓</span> +50 fichas ilustradas en 6 bloques</li>
+          <li><span class="c">✓</span> Acceso inmediato por correo</li>
+        </ul>
+        <div class="price"><div class="de">de US$ 14,90 por:</div><div class="big">US$ 4,90</div><div class="par">pago único con tarjeta</div></div>
+        <div class="econ">💰 Ahorras <b>US$ 10,00</b></div>
+        <a href="#planos" class="btn gold" data-pv-cta="" data-checkout="" data-plan="basico">QUIERO EL PLAN BÁSICO</a>
+        <div class="upwarn">⚠️ Atención: hay una oferta aún mejor con los 4 bonos 👉</div>
+      </div>
+      <div class="plan feat">
+        <span class="fbadge">⭐ MÁS VENDIDO · MEJOR VALOR</span>
+        <div class="pn">PLAN COMPLETO</div>
+        <div class="mock-bundle small">
+          <img class="mb1" src="assets/img/bono1.webp" width="448" height="600" loading="lazy" alt="">
+          <img class="mb2" src="assets/img/bono2.webp" width="448" height="600" loading="lazy" alt="">
+          <img class="mb3" src="assets/img/bono3.webp" width="448" height="600" loading="lazy" alt="">
+          <img class="mb4" src="assets/img/bono4.webp" width="448" height="600" loading="lazy" alt="">
+          <img class="mbc" src="assets/img/guia-capa.webp" width="386" height="517" loading="lazy" alt="Guía con los 4 bonos">
+        </div>
+        <ul class="plist">
+          <li><span class="c">✓</span> Guía Visual de Fallas Eléctricas en Casa</li>
+          <li><span class="c">✓</span> +50 fichas ilustradas en 6 bloques</li>
+          <li><span class="c">🎁</span><span><b>Bono 1:</b> Plan de Emergencia Eléctrica</span></li>
+          <li><span class="c">🎁</span><span><b>Bono 2:</b> Mapa de tu Tablero</span></li>
+          <li><span class="c">🎁</span><span><b>Bono 3:</b> Que no te engañen</span></li>
+          <li><span class="c">🎁</span><span><b>Bono 4:</b> Tabla de Consumo y Fugas</span></li>
+          <li><span class="c">✓</span> Lista para imprimir o usar en el celular</li>
+          <li><span class="c">✓</span> Garantía de 7 días</li>
+        </ul>
+        <div class="price"><div class="de">de US$ 55,50 por:</div><div class="big"><span class="pc-anim">US$ 7,90</span></div><div class="par">pago único con tarjeta</div></div>
+        <div class="econ">💰 Ahorras <b>US$ 47,60</b> (86% de descuento)</div>
+        <a href="#planos" class="btn" data-pv-cta="" data-checkout="" data-plan="completo">QUIERO EL PLAN COMPLETO</a>
+        <div class="pay">🔒 Pago seguro · Visa · Mastercard · Amex</div>
+      </div>
+    </div>
+    <div class="paygrid"><span>🔒 Pago 100% seguro procesado por Stripe · precios en dólares (USD)</span></div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="sec gar">
+  <div class="garwrap">
+    <div class="gseal-css"><b>7</b><span>DÍAS DE<br>GARANTÍA</span></div>
+    <div>
+      <h2 class="h2">GARANTÍA DE 7 DÍAS O TE DEVOLVEMOS TU DINERO</h2>
+      <p>Abre la guía, consulta una ficha y comprueba si te ayuda a reconocer lo que pasa en tu casa. Si sientes que no te sirvió, pide el reembolso dentro de los 7 días y te devolvemos el 100% de lo que pagaste. Sin preguntas y sin complicaciones. El riesgo es todo nuestro.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec passos center">
+  <div class="wrap">
+    <h2 class="h2">CÓMO FUNCIONA EL ACCESO</h2>
+    <div class="grid g4" style="margin-top:38px">
+      <div class="passo"><div class="pic">💳</div><h3>Haz tu compra</h3><p>pago 100% seguro con tarjeta.</p></div>
+      <div class="passo"><div class="pic">📩</div><h3>Recibe el acceso</h3><p>la guía llega a tu correo al instante.</p></div>
+      <div class="passo"><div class="pic">📱</div><h3>Ábrela donde quieras</h3><p>en el celular, la computadora o imprímela.</p></div>
+      <div class="passo"><div class="pic">🔌</div><h3>Encuentra la señal</h3><p>sigue la ficha y sabe qué hacer hoy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="wrap" style="max-width:760px">
+    <div class="center"><h2 class="h2">PREGUNTAS FRECUENTES</h2></div>
+    <div style="margin-top:38px">
+      <details class="q"><summary>¿Necesito saber de electricidad?</summary><p>No. La guía está hecha para que empieces por lo que ves (olor, chispa, calor, una luz que parpadea), sin saber el nombre técnico de la falla. Si eres técnico, también te sirve como referencia visual rápida.</p></details>
+      <details class="q"><summary>¿Reemplaza a un electricista?</summary><p>No. La guía te ayuda a reconocer la falla, entender qué tan urgente es y saber qué hacer primero. Para reparaciones, siempre llama a un electricista calificado: cada ficha te dice cuándo hacerlo sin dudar.</p></details>
+      <details class="q"><summary>¿Voy a encontrar exactamente mi falla?</summary><p>La guía reúne las +50 fallas eléctricas más comunes en casas y departamentos, organizadas por señal. La idea es que encuentres la ficha más parecida y compares. Si las señales no coinciden, la guía te indica cuándo pedir una revisión profesional.</p></details>
+      <details class="q"><summary>¿Es un curso en video?</summary><p>No. Es una guía visual en PDF, con fichas listas para consultar en el momento en que ves el problema. No tienes que ver horas de clases.</p></details>
+      <details class="q"><summary>¿Sirve para mi país?</summary><p>Sí. Las fallas que muestra la guía (enchufes quemados, falsos contactos, pastillas que se botan, fugas) son las mismas en cualquier casa de Latinoamérica. Usamos los nombres más comunes: enchufe o tomacorriente, pastilla o breaker, tablero.</p></details>
+      <details class="q"><summary>¿Funciona en el celular? ¿Puedo imprimirla?</summary><p>Sí. Es un PDF que abre en el celular, la tablet o la computadora, y puedes imprimirlo en casa o en una imprenta.</p></details>
+      <details class="q"><summary>¿Cuánto tarda en llegar?</summary><p>El acceso es inmediato: apenas se confirma el pago, recibes la guía en tu correo electrónico. Revisa también la carpeta de spam o promociones.</p></details>
+      <details class="q"><summary>¿Tiene garantía? ¿Es seguro comprar?</summary><p>Sí. Tienes 7 días de garantía: si no te sirve, te devolvemos el 100%. El pago se procesa por Stripe, una de las plataformas de pago más seguras del mundo. No guardamos los datos de tu tarjeta.</p></details>
+    </div>
+    <div class="center" style="margin-top:34px"><a href="#planos" class="btn" data-pv-cta="">SÍ, QUIERO LA GUÍA AHORA →</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Guía Visual de Fallas Eléctricas en Casa</div>
+  <div>© <span id="ano"></span> · Todos los derechos reservados.</div>
+  <div class="fmini">Esta guía es de carácter informativo y educativo: te orienta y no reemplaza a un electricista calificado. Ante cualquier riesgo, corta la energía y busca ayuda profesional.</div>
+  <div class="fmini">Este sitio no está afiliado a Facebook, Instagram ni a ninguna entidad de Meta. Después de salir de Facebook, la responsabilidad por el contenido es de este sitio.</div>
+  <div class="fmini">La reproducción no autorizada, total o parcial, de este material constituye una violación de derechos de autor.</div>
+</footer>
+
+<script>
+/* ====== LINKS DE CHECKOUT (pegar aquí) ====== */
+var CHECKOUT = {
+  basico:   "https://ggcheckout.app/checkout/v2/bO3FbGkZ7oEz4sEGNufHzt",   // Plan Básico US$ 4,90
+  completo: "https://ggcheckout.app/checkout/v2/NaAcAzjCAWLFzYt8MG78mG"    // Plan Completo US$ 7,90
+};
+(function(){
+  try{var d=new Date(),p=function(n){return(n<10?"0":"")+n};
+    var e=document.getElementById("oferta-data"); if(e) e.textContent=p(d.getDate())+"/"+p(d.getMonth()+1)+"/"+d.getFullYear();
+    var a=document.getElementById("ano"); if(a) a.textContent=d.getFullYear();}catch(e){}
+  var plans=document.getElementById('planos');
+  document.querySelectorAll('[data-plan]').forEach(function(b){var u=CHECKOUT[b.getAttribute('data-plan')]; if(u){b.setAttribute('data-checkout',u); b.setAttribute('href',u);}});
+  function go(e){
+    var el=e.currentTarget, url=el.getAttribute('data-checkout');
+    if(url){e.preventDefault(); var q=location.search.replace(/^\?/,''); if(q) url+=(url.indexOf('?')>-1?'&':'?')+q; window.location.href=url; return;}
+    if(!plans) return; e.preventDefault(); plans.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  document.querySelectorAll('[data-pv-cta]').forEach(function(b){b.addEventListener('click',go);});
+})();
+(function(){
+  var list=document.querySelectorAll('.marquee'); if(!list.length) return;
+  Array.prototype.forEach.call(list,function(m){
+    var track=m.querySelector('.mqtrack'); if(!track) return;
+    var speed=parseFloat(m.getAttribute('data-speed'))||40;
+    var items=Array.prototype.slice.call(track.children);
+    items.forEach(function(it){ track.appendChild(it.cloneNode(true)); });
+    var half=0; function measure(){ var f=track.children[items.length]; half=f?f.offsetLeft:track.scrollWidth/2; }
+    var x=0,last=null,paused=false;
+    m.addEventListener('mouseenter',function(){paused=true;}); m.addEventListener('mouseleave',function(){paused=false;});
+    m.addEventListener('touchstart',function(){paused=true;},{passive:true}); m.addEventListener('touchend',function(){paused=false;});
+    function frame(t){ if(last===null) last=t; var dt=(t-last)/1000; last=t; if(!half) measure();
+      if(!paused && half){ x-=speed*dt; if(-x>=half){ x+=half; } track.style.transform='translateX('+x+'px)'; } requestAnimationFrame(frame); }
+    measure(); window.addEventListener('load',measure); window.addEventListener('resize',measure); requestAnimationFrame(frame);
+  });
+})();
+</script>
+</body>
+</html>
