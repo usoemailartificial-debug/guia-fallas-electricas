@@ -237,10 +237,45 @@ footer{background:var(--primary);color:rgba(255,255,255,.6);text-align:center;pa
 footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margin-bottom:8px}
 
 /* carrossel marquee */
-.marquee{max-width:1120px;margin:34px auto 0;overflow:hidden;position:relative}
+.marquee{max-width:1180px;margin:26px auto 0;overflow:hidden;position:relative;padding:8px 0 14px}
 .mqtrack{display:flex;gap:18px;width:max-content;will-change:transform}
-.mqitem{flex:0 0 auto;width:clamp(238px,60vw,300px)}
-.mqitem img{width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 22px 46px -16px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.16)}
+.mqitem{flex:0 0 auto;width:clamp(272px,80vw,360px)}
+.mqzoom{position:relative;display:block;width:100%;padding:0;margin:0;border:0;background:none;cursor:zoom-in;border-radius:16px;-webkit-tap-highlight-color:transparent;font:inherit;color:inherit}
+.mqzoom img{width:100%;height:auto;display:block;border-radius:16px;background:rgba(255,255,255,.07);box-shadow:0 22px 46px -16px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.16);transition:transform .25s ease}
+.mqzoom:hover img{transform:translateY(-5px)}
+.mqzoom:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.mqzoom::after{content:"Ampliar";position:absolute;right:10px;bottom:12px;padding:8px 13px 8px 32px;border-radius:999px;background:rgba(15,27,45,.9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFC400' stroke-width='2.6' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5 21 21M10.5 7.8v5.4M7.8 10.5h5.4'/%3E%3C/svg%3E") no-repeat 11px 50%/16px 16px;color:#fff;font-family:var(--fh);font-weight:700;font-size:12.5px;line-height:1;box-shadow:0 6px 16px rgba(0,0,0,.35);pointer-events:none}
+.mqhint{margin:12px auto 0;font-family:var(--fh);font-weight:700;font-size:14.5px;color:var(--gold-2)}
+/* lightbox (zoom das páginas) */
+html.lb-lock,html.lb-lock body{overflow:hidden}
+.lb{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;background:#070d18;opacity:0;transition:opacity .2s ease;overscroll-behavior:contain;-webkit-tap-highlight-color:transparent}
+.lb[hidden]{display:none}
+.lb.open{opacity:1}
+.lb-top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;padding-top:max(10px,env(safe-area-inset-top))}
+.lb-count{font-family:var(--fh);font-weight:700;font-size:13.5px;line-height:1;color:#fff;background:rgba(255,255,255,.12);padding:10px 14px;border-radius:999px}
+.lb-tools{display:flex;gap:8px}
+.lb-btn{width:44px;height:44px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;cursor:pointer}
+.lb-btn svg{width:20px;height:20px}
+.lb-btn:hover{background:rgba(255,255,255,.22)}
+.lb-x{background:#fff;border-color:#fff;color:var(--primary)}
+.lb-x:hover{background:var(--gold);border-color:var(--gold)}
+.lb-btn:focus-visible,.lb-nav:focus-visible,.lb-cta:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.lb-stage{position:relative;flex:1;min-height:0;overflow:hidden;touch-action:none;cursor:zoom-in;user-select:none;-webkit-user-select:none}
+.lb-stage.zoomed{cursor:grab}
+.lb-stage.drag{cursor:grabbing}
+.lb-img{position:absolute;max-width:none;max-height:none;border-radius:8px;box-shadow:0 30px 80px -20px rgba(0,0,0,.85);transform-origin:50% 50%;will-change:transform;-webkit-user-drag:none;user-select:none;pointer-events:none;background:#fff}
+.lb-img.anim{transition:transform .25s ease,opacity .25s ease}
+.lb-spin{position:absolute;left:50%;top:50%;z-index:2;width:34px;height:34px;margin:-17px 0 0 -17px;border:3px solid rgba(255,255,255,.3);border-top-color:var(--gold);border-radius:50%;animation:lbspin .8s linear infinite;display:none}
+.lb-stage.loading .lb-spin{display:block}
+@keyframes lbspin{to{transform:rotate(360deg)}}
+.lb-nav{position:absolute;top:50%;z-index:3;width:48px;height:48px;margin-top:-24px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(15,27,45,.8);color:#fff;display:grid;place-items:center;cursor:pointer}
+.lb-nav svg{width:24px;height:24px}
+.lb-nav:hover{background:var(--primary-3)}
+.lb-prev{left:14px}.lb-next{right:14px}
+.lb-bottom{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:9px;padding:10px 16px;padding-bottom:max(14px,env(safe-area-inset-bottom))}
+.lb-hint{margin:0;color:rgba(255,255,255,.8);font-family:var(--fb);font-size:13px;line-height:1.35;text-align:center;transition:opacity .6s}
+.lb-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(100deg,#2fc85d,#17a046);color:#fff;text-decoration:none;font-family:var(--fh);font-weight:800;font-size:15px;line-height:1;padding:14px 26px;border-radius:999px;box-shadow:0 12px 28px -10px rgba(23,160,70,.75)}
+@media(max-width:640px){.lb-nav{width:40px;height:40px;margin-top:-20px;background:rgba(15,27,45,.62)}.lb-prev{left:6px}.lb-next{right:6px}.lb-hint{font-size:12.5px}}
 
 /* ===== Fallas Eléctricas: extras ===== */
 .mock-hero{position:relative;width:100%;max-width:520px;height:clamp(330px,82vw,520px);margin:26px auto 6px}
@@ -388,20 +423,24 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
   <div class="wrap">
     <h2 class="h2">📖 MIRA LA GUÍA POR DENTRO</h2>
     <p class="lead">Cada ficha te dice qué estás viendo, la causa probable, qué revisar y si es urgente.</p>
+    <p class="mqhint">🔍 Toca una página para verla en grande y hacer zoom</p>
     <div class="marquee" data-speed="40">
       <div class="mqtrack">
-        <div class="mqitem"><img src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha 01 Enchufe quemado"></div>
-        <div class="mqitem"><img src="assets/img/p02-mapa.webp" width="386" height="517" alt="Mapa rápido de señales"></div>
-        <div class="mqitem"><img src="assets/img/f08-falso-contacto.webp" width="386" height="517" alt="Ficha 08 Falso contacto"></div>
-        <div class="mqitem"><img src="assets/img/p03-semaforo.webp" width="386" height="517" alt="El semáforo de atención"></div>
-        <div class="mqitem"><img src="assets/img/f15-pastilla.webp" width="386" height="517" alt="Ficha 15 La pastilla se bota sola"></div>
-        <div class="mqitem"><img src="assets/img/f24-luces.webp" width="386" height="517" alt="Ficha 24 Luces que parpadean"></div>
-        <div class="mqitem"><img src="assets/img/f30-fuga.webp" width="386" height="517" alt="Ficha 30 Fuga de corriente"></div>
-        <div class="mqitem"><img src="assets/img/f36-tierra.webp" width="386" height="517" alt="Ficha 36 Sin puesta a tierra"></div>
-        <div class="mqitem"><img src="assets/img/p53-chequeo.webp" width="386" height="517" alt="Chequeo rápido en casa"></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="0"><img data-src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha 01: Enchufe quemado"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="1"><img data-src="assets/img/f32-ducha.webp" width="386" height="517" alt="Ficha 32: Corrientazo en la ducha"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="2"><img data-src="assets/img/f09-cable-caliente.webp" width="386" height="517" alt="Ficha 09: Cable que se calienta"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="3"><img data-src="assets/img/c-sobrecarga-corto-fuga.webp" width="386" height="517" alt="Comparación: sobrecarga, cortocircuito o fuga"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="4"><img data-src="assets/img/f06-regleta.webp" width="386" height="517" alt="Ficha 06: Regleta sobrecargada"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="5"><img data-src="assets/img/f21-borne.webp" width="386" height="517" alt="Ficha 21: Borne quemado"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="6"><img data-src="assets/img/f08-falso-contacto.webp" width="386" height="517" alt="Ficha 08: Falso contacto"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="7"><img data-src="assets/img/f34-cable-ducha.webp" width="386" height="517" alt="Ficha 34: Cable de la ducha derretido"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="8"><img data-src="assets/img/f24-luces.webp" width="386" height="517" alt="Ficha 24: Luces que parpadean"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="9"><img data-src="assets/img/c-enchufe-envejecido.webp" width="386" height="517" alt="Comparación: enchufe quemado o envejecido"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="10"><img data-src="assets/img/f15-pastilla.webp" width="386" height="517" alt="Ficha 15: La pastilla se bota sola"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="11"><img data-src="assets/img/f41-pastilla-mayor.webp" width="386" height="517" alt="Ficha 41: Pastilla mayor que el cable"></button></div>
       </div>
     </div>
-    <a href="#planos" class="btn" data-pv-cta="" style="margin-top:34px">QUIERO VER TODAS LAS FICHAS</a>
+    <a href="#planos" class="btn" data-pv-cta="" style="margin-top:22px">QUIERO VER TODAS LAS FICHAS</a>
   </div>
 </section>
 
@@ -578,6 +617,25 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
   <div class="fmini">La reproducción no autorizada, total o parcial, de este material constituye una violación de derechos de autor.</div>
 </footer>
 
+<!-- LIGHTBOX: página en grande con zoom -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Página de la guía en grande" hidden>
+  <div class="lb-top">
+    <span class="lb-count" id="lbCount">1 / 12</span>
+    <div class="lb-tools">
+      <button type="button" class="lb-btn" id="lbOut" aria-label="Alejar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+      <button type="button" class="lb-btn" id="lbIn" aria-label="Acercar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M12 5v14"/></svg></button>
+      <button type="button" class="lb-btn lb-x" id="lbClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="lb-stage" id="lbStage"><img class="lb-img" id="lbImg" alt="" draggable="false"><span class="lb-spin" aria-hidden="true"></span></div>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Página anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Página siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="lb-bottom">
+    <p class="lb-hint" id="lbHint">Pellizca o toca dos veces para hacer zoom</p>
+    <a href="#planos" class="lb-cta" id="lbCta">QUIERO LA GUÍA COMPLETA</a>
+  </div>
+</div>
+
 <script>
 /* ====== LINKS DE CHECKOUT (pegar aquí) ====== */
 var CHECKOUT = {
@@ -603,15 +661,127 @@ var CHECKOUT = {
     var track=m.querySelector('.mqtrack'); if(!track) return;
     var speed=parseFloat(m.getAttribute('data-speed'))||40;
     var items=Array.prototype.slice.call(track.children);
-    items.forEach(function(it){ track.appendChild(it.cloneNode(true)); });
+    items.forEach(function(it){ var c=it.cloneNode(true); c.setAttribute('aria-hidden','true');
+      Array.prototype.forEach.call(c.querySelectorAll('button,a'),function(el){ el.setAttribute('tabindex','-1'); }); track.appendChild(c); });
     var half=0; function measure(){ var f=track.children[items.length]; half=f?f.offsetLeft:track.scrollWidth/2; }
     var x=0,last=null,paused=false;
     m.addEventListener('mouseenter',function(){paused=true;}); m.addEventListener('mouseleave',function(){paused=false;});
     m.addEventListener('touchstart',function(){paused=true;},{passive:true}); m.addEventListener('touchend',function(){paused=false;});
-    function frame(t){ if(last===null) last=t; var dt=(t-last)/1000; last=t; if(!half) measure();
-      if(!paused && half){ x-=speed*dt; if(-x>=half){ x+=half; } track.style.transform='translateX('+x+'px)'; } requestAnimationFrame(frame); }
+    m.addEventListener('focusin',function(){paused=true;}); m.addEventListener('focusout',function(){paused=false;});
+    m.addEventListener('scroll',function(){ if(m.scrollLeft) m.scrollLeft=0; });
+    function frame(t){ if(last===null) last=t; var dt=Math.min(.1,(t-last)/1000); last=t; if(!half) measure();
+      if(!paused && !window.__lbOpen && half){ x-=speed*dt; if(-x>=half){ x+=half; } track.style.transform='translateX('+x+'px)'; } requestAnimationFrame(frame); }
     measure(); window.addEventListener('load',measure); window.addEventListener('resize',measure); requestAnimationFrame(frame);
   });
+})();
+/* carga diferida das páginas do carrossel */
+(function(){
+  var done=false;
+  function load(){ if(done) return; done=true;
+    Array.prototype.forEach.call(document.querySelectorAll('.marquee img[data-src]'),function(im){ im.src=im.getAttribute('data-src'); im.removeAttribute('data-src'); }); }
+  var m=document.querySelector('.marquee'); if(!m) return;
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ load(); io.disconnect(); break; } } },{rootMargin:'900px 0px'}); io.observe(m); }
+  else load();
+  window.addEventListener('load',function(){ setTimeout(load,2500); });
+})();
+/* lightbox: página en grande con zoom (pellizcar, doble toque, rueda, arrastrar) */
+(function(){
+  var lb=document.getElementById('lb'); if(!lb) return;
+  function $(id){ return document.getElementById(id); }
+  var stage=$('lbStage'), img=$('lbImg'), cnt=$('lbCount'), hint=$('lbHint'), bClose=$('lbClose');
+  var pics=[];
+  Array.prototype.forEach.call(document.querySelectorAll('.mqzoom[data-i]'),function(b){
+    var i=+b.getAttribute('data-i'), im=b.querySelector('img'); if(!im||pics[i]) return;
+    var src=im.getAttribute('data-src')||im.getAttribute('src');
+    pics[i]={src:src, full:im.getAttribute('data-full')||src, alt:im.getAttribute('alt')||'', w:+im.getAttribute('width')||3, h:+im.getAttribute('height')||4};
+  });
+  pics=pics.filter(Boolean); if(!pics.length) return;
+  var cur=0, isOpen=false, pushed=false, after=null, lastFocus=null;
+  var s=1, tx=0, ty=0, bw=0, bh=0, SW=0, SH=0, MAX=5;
+  var coarse=!!(window.matchMedia&&matchMedia('(pointer:coarse)').matches);
+  hint.textContent=coarse?'Pellizca o toca dos veces para hacer zoom · desliza para ver otra página':'Rueda del mouse o clic para hacer zoom · flechas para cambiar de página';
+  function apply(anim){ img.classList.toggle('anim',!!anim); img.style.opacity=''; img.style.transform='translate('+tx+'px,'+ty+'px) scale('+s+')'; stage.classList.toggle('zoomed',s>1.02); }
+  function clampT(){ var ex=Math.max(0,(bw*s-SW)/2), ey=Math.max(0,(bh*s-SH)/2); tx=Math.min(ex,Math.max(-ex,tx)); ty=Math.min(ey,Math.max(-ey,ty)); }
+  function layout(){ SW=stage.clientWidth; SH=stage.clientHeight; var p=pics[cur], wide=SW>760;
+    var k=Math.min((SW-2*(wide?84:8))/p.w,(SH-2*(wide?14:4))/p.h); bw=Math.max(40,Math.round(p.w*k)); bh=Math.max(40,Math.round(p.h*k));
+    img.style.width=bw+'px'; img.style.height=bh+'px'; img.style.left=Math.round((SW-bw)/2)+'px'; img.style.top=Math.round((SH-bh)/2)+'px'; }
+  function rel(x,y){ var r=stage.getBoundingClientRect(); return {x:x-r.left-r.width/2, y:y-r.top-r.height/2}; }
+  function zoomTo(ns,cx,cy,anim){ ns=Math.max(1,Math.min(MAX,ns)); var u=(cx-tx)/s, v=(cy-ty)/s; tx=cx-ns*u; ty=cy-ns*v; s=ns;
+    if(s<1.01){ s=1; tx=0; ty=0; } clampT(); apply(anim); }
+  function show(i){ cur=(i+pics.length)%pics.length; var p=pics[cur]; s=1; tx=0; ty=0; layout(); apply(false);
+    img.alt=p.alt; cnt.textContent=(cur+1)+' / '+pics.length; img.src=p.src;
+    if(p.full!==p.src){ stage.classList.add('loading'); var hi=new Image();
+      hi.onload=function(){ if(pics[cur]===p){ img.src=p.full; stage.classList.remove('loading'); } };
+      hi.onerror=function(){ if(pics[cur]===p) stage.classList.remove('loading'); }; hi.src=p.full; }
+    else stage.classList.remove('loading');
+    [cur+1,cur-1].forEach(function(j){ var q=pics[(j+pics.length)%pics.length]; if(q.full!==q.src){ var t=new Image(); t.src=q.full; } }); }
+  function open(i){ if(isOpen){ show(i); return; } isOpen=true; window.__lbOpen=true; lastFocus=document.activeElement;
+    lb.hidden=false; document.documentElement.classList.add('lb-lock'); show(i);
+    requestAnimationFrame(function(){ lb.classList.add('open'); });
+    try{ history.pushState({lb:1},'',location.href); pushed=true; }catch(e){ pushed=false; }
+    hint.style.opacity='1'; clearTimeout(hint._t); hint._t=setTimeout(function(){ hint.style.opacity='0'; },4500);
+    setTimeout(function(){ try{ bClose.focus({preventScroll:true}); }catch(e){} },40); }
+  function closeUI(){ if(!isOpen) return; isOpen=false; window.__lbOpen=false; lb.classList.remove('open'); document.documentElement.classList.remove('lb-lock');
+    setTimeout(function(){ if(!isOpen){ lb.hidden=true; img.removeAttribute('src'); } },220);
+    if(lastFocus&&lastFocus.focus){ try{ lastFocus.focus({preventScroll:true}); }catch(e){} } }
+  function runAfter(){ var f=after; after=null; if(f) setTimeout(f,50); }
+  function close(fn){ if(!isOpen) return; after=fn||null;
+    if(pushed){ pushed=false; history.back(); setTimeout(function(){ if(isOpen){ closeUI(); runAfter(); } },450); }
+    else { closeUI(); runAfter(); } }
+  window.addEventListener('popstate',function(){ if(isOpen){ pushed=false; closeUI(); runAfter(); } });
+  document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.mqzoom'); if(!b) return; e.preventDefault(); open(+b.getAttribute('data-i')||0); });
+  bClose.addEventListener('click',function(){ close(); });
+  $('lbPrev').addEventListener('click',function(){ show(cur-1); });
+  $('lbNext').addEventListener('click',function(){ show(cur+1); });
+  $('lbIn').addEventListener('click',function(){ zoomTo(s*1.6,0,0,true); });
+  $('lbOut').addEventListener('click',function(){ zoomTo(s/1.6,0,0,true); });
+  $('lbCta').addEventListener('click',function(e){ e.preventDefault(); close(function(){ var p=document.getElementById('planos'); if(p) p.scrollIntoView({behavior:'smooth',block:'start'}); }); });
+  document.addEventListener('keydown',function(e){ if(!isOpen) return; var k=e.key;
+    if(k==='Escape'){ e.preventDefault(); close(); }
+    else if(k==='ArrowRight'){ e.preventDefault(); show(cur+1); }
+    else if(k==='ArrowLeft'){ e.preventDefault(); show(cur-1); }
+    else if(k==='+'||k==='='){ zoomTo(s*1.4,0,0,true); }
+    else if(k==='-'||k==='_'){ zoomTo(s/1.4,0,0,true); }
+    else if(k==='Tab'){ var f=Array.prototype.slice.call(lb.querySelectorAll('button,a[href]')), i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){ e.preventDefault(); f[f.length-1].focus(); } else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } } });
+  window.addEventListener('resize',function(){ if(isOpen){ s=1; tx=0; ty=0; layout(); apply(false); } });
+  lb.addEventListener('touchmove',function(e){ e.preventDefault(); },{passive:false});
+  lb.addEventListener('gesturestart',function(e){ e.preventDefault(); });
+  /* gestos */
+  var P={}, g=null, lastTap=0, lastX=0, lastY=0, tapT=null;
+  function list(){ var a=[]; for(var k in P) a.push(P[k]); return a; }
+  function insideImg(x,y){ var r=img.getBoundingClientRect(); return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom; }
+  function begin(ptype){ var a=list(); img.classList.remove('anim');
+    if(a.length===1){ g={type:'pan',x0:a[0].x,y0:a[0].y,tx0:tx,ty0:ty,moved:false,ptype:ptype}; }
+    else if(a.length>=2){ var d=Math.hypot(a[1].x-a[0].x,a[1].y-a[0].y)||1, m=rel((a[0].x+a[1].x)/2,(a[0].y+a[1].y)/2);
+      g={type:'pinch',d0:d,s0:s,u:(m.x-tx)/s,v:(m.y-ty)/s}; } }
+  stage.addEventListener('pointerdown',function(e){ if(e.button) return; try{ stage.setPointerCapture(e.pointerId); }catch(_){}
+    P[e.pointerId]={x:e.clientX,y:e.clientY}; begin(e.pointerType); });
+  stage.addEventListener('pointermove',function(e){ if(!P[e.pointerId]) return; P[e.pointerId]={x:e.clientX,y:e.clientY}; if(!g) return; var a=list();
+    if(g.type==='pinch'&&a.length>=2){ var d=Math.hypot(a[1].x-a[0].x,a[1].y-a[0].y)||1, m=rel((a[0].x+a[1].x)/2,(a[0].y+a[1].y)/2);
+      s=Math.max(1,Math.min(MAX,g.s0*d/g.d0)); tx=m.x-s*g.u; ty=m.y-s*g.v; clampT(); apply(false); return; }
+    if(g.type!=='pan'||a.length!==1) return;
+    var dx=a[0].x-g.x0, dy=a[0].y-g.y0;
+    if(!g.moved){ if(Math.abs(dx)+Math.abs(dy)<8) return; g.moved=true; stage.classList.add('drag'); }
+    if(s>1.02){ tx=g.tx0+dx; ty=g.ty0+dy; clampT(); apply(false); }
+    else { var dyy=dy>0?dy*.5:0; img.style.transform='translate('+dx+'px,'+dyy+'px)'; img.style.opacity=String(Math.max(.35,1-Math.abs(dx)/700-dyy/500)); } });
+  function end(e){ if(!P[e.pointerId]) return; delete P[e.pointerId]; var a=list(); stage.classList.remove('drag'); if(!g) return;
+    if(g.type==='pinch'){ if(a.length===1){ g={type:'pan',x0:a[0].x,y0:a[0].y,tx0:tx,ty0:ty,moved:true,ptype:'touch'}; }
+      else if(!a.length){ g=null; if(s<1.06) zoomTo(1,0,0,true); } return; }
+    var dx=e.clientX-g.x0, dy=e.clientY-g.y0, moved=g.moved, ptype=g.ptype; g=null;
+    if(e.type==='pointercancel'){ apply(true); return; }
+    if(moved){ if(s<=1.02){ if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)){ show(cur+(dx<0?1:-1)); return; }
+        if(dy>120&&dy>Math.abs(dx)){ close(); return; } apply(true); } return; }
+    tap(e,ptype); }
+  stage.addEventListener('pointerup',end); stage.addEventListener('pointercancel',end);
+  function tap(e,ptype){ var m=rel(e.clientX,e.clientY), out=!insideImg(e.clientX,e.clientY), now=Date.now();
+    if(ptype==='mouse'){ if(out&&s<=1.02){ close(); return; } if(s>1.02) zoomTo(1,0,0,true); else zoomTo(2.5,m.x,m.y,true); return; }
+    if(now-lastTap<330&&Math.abs(e.clientX-lastX)<40&&Math.abs(e.clientY-lastY)<40){ clearTimeout(tapT); lastTap=0;
+      if(s>1.02) zoomTo(1,0,0,true); else zoomTo(2.6,m.x,m.y,true); return; }
+    lastTap=now; lastX=e.clientX; lastY=e.clientY; clearTimeout(tapT);
+    tapT=setTimeout(function(){ if(out&&s<=1.02) close(); },340); }
+  stage.addEventListener('wheel',function(e){ e.preventDefault(); var m=rel(e.clientX,e.clientY);
+    zoomTo(s*Math.exp(-e.deltaY*(e.ctrlKey?0.012:0.0022)),m.x,m.y,false); },{passive:false});
 })();
 </script>
 </body>
