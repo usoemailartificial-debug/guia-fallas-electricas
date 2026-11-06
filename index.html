@@ -246,6 +246,41 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
 .mqzoom:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 .mqzoom::after{content:"Ampliar";position:absolute;right:10px;bottom:12px;padding:8px 13px 8px 32px;border-radius:999px;background:rgba(15,27,45,.9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFC400' stroke-width='2.6' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5 21 21M10.5 7.8v5.4M7.8 10.5h5.4'/%3E%3C/svg%3E") no-repeat 11px 50%/16px 16px;color:#fff;font-family:var(--fh);font-weight:700;font-size:12.5px;line-height:1;box-shadow:0 6px 16px rgba(0,0,0,.35);pointer-events:none}
 .mqhint{margin:12px auto 0;font-family:var(--fh);font-weight:700;font-size:14.5px;color:var(--gold-2)}
+/* pop-up: oferta do Plano Completo ao escolher o Básico */
+.up{position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(5,10,19,.74);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .22s ease;overscroll-behavior:contain}
+.up[hidden]{display:none}
+.up.open{opacity:1}
+.up-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 36px);overflow:auto;background:#fff;border-radius:24px;box-shadow:0 40px 90px -20px rgba(0,0,0,.7);transform:translateY(24px) scale(.97);transition:transform .3s cubic-bezier(.2,.9,.3,1.2);-webkit-overflow-scrolling:touch}
+.up.open .up-box{transform:none}
+.up-top{position:relative;text-align:center;color:#fff;padding:22px 22px 0;background:radial-gradient(120% 100% at 50% 0,#2a4670 0,#16263f 55%,#0F1B2D 100%);border-radius:24px 24px 0 0}
+.up-top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:repeating-linear-gradient(-45deg,#FFC400 0 14px,#111 14px 28px)}
+.up-x{position:absolute;top:12px;right:12px;width:38px;height:38px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;cursor:pointer;z-index:2}
+.up-x svg{width:18px;height:18px}
+.up-x:hover{background:rgba(255,255,255,.25)}
+.up-tag{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-family:var(--fh);font-weight:800;font-size:12.5px;letter-spacing:.06em;padding:7px 14px;border-radius:999px}
+.up-tag i{width:8px;height:8px;border-radius:50%;background:#fff;animation:upPulse 1.2s ease-in-out infinite}
+@keyframes upPulse{50%{opacity:.25;transform:scale(.7)}}
+.up-h{font-family:var(--fh);font-weight:900;font-size:clamp(21px,5.6vw,25px);line-height:1.14;margin:12px auto 0;max-width:340px;letter-spacing:-.01em;text-wrap:balance}
+.up-h span{color:var(--gold)}
+.up-h em{font-style:normal;color:#0F1B2D;background:var(--gold);padding:0 7px;border-radius:7px;white-space:nowrap}
+.up-img{display:block;width:100%;max-width:330px;height:auto;margin:10px auto -4px;position:relative;z-index:1;filter:drop-shadow(0 14px 18px rgba(0,0,0,.35))}
+.up-body{padding:16px 22px 18px;text-align:center}
+.up-list{list-style:none;margin:0 auto;padding:0;max-width:330px;text-align:left;font-family:var(--fb);font-size:14.5px;line-height:1.35;color:var(--ink)}
+.up-list li{display:flex;gap:9px;align-items:flex-start;padding:4px 0}
+.up-list li::before{content:"";flex:0 0 19px;height:19px;margin-top:1px;border-radius:50%;background:#2fc85d url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") no-repeat center/12px}
+.up-price{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-top:12px;font-family:var(--fh)}
+.up-price s{color:#8a97a6;font-weight:600;font-size:17px}
+.up-price strong{font-weight:900;font-size:38px;line-height:1;color:var(--primary);letter-spacing:-.02em}
+.up-note{display:inline-block;margin:8px 0 0;background:#FFF6D6;color:#5a4300;border:1px solid #FFE08A;font-family:var(--fb);font-weight:700;font-size:12.5px;padding:6px 12px;border-radius:999px}
+.up-yes{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:14px;padding:17px 16px;border-radius:16px;background:linear-gradient(100deg,#2fc85d,#17a046);color:#fff;text-decoration:none;font-family:var(--fh);font-weight:800;font-size:16.5px;line-height:1.15;box-shadow:0 14px 28px -10px rgba(23,160,70,.75);animation:upBeat 1.8s ease-in-out infinite}
+.up-yes:hover{filter:brightness(1.06)}
+@keyframes upBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.up-no{display:block;margin:12px auto 0;padding:6px;color:#7a8794;font-family:var(--fb);font-size:13.5px;text-decoration:underline;text-underline-offset:3px}
+.up-safe{margin:8px 0 0;color:#8a97a6;font-family:var(--fb);font-size:12px}
+.up-x:focus-visible,.up-yes:focus-visible,.up-no:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:560px){.up{align-items:flex-end;padding:0}.up-box{max-width:none;max-height:94vh;border-radius:24px 24px 0 0;transform:translateY(100%)}.up-body{padding-bottom:max(18px,env(safe-area-inset-bottom))}}
+@media(max-height:700px){.up-top{padding-top:16px}.up-h{font-size:21px;margin-top:9px}.up-img{max-width:205px;margin-top:6px}.up-body{padding-top:12px}.up-list{font-size:13.5px}.up-list li{padding:2px 0}.up-price{margin-top:8px}.up-price strong{font-size:32px}.up-yes{margin-top:10px;padding:15px}.up-no{margin-top:8px}.up-safe{margin-top:4px}}
+@media(prefers-reduced-motion:reduce){.up-yes,.up-tag i{animation:none}.up-box{transition:none}}
 /* lightbox (zoom das páginas) */
 html.lb-lock,html.lb-lock body{overflow:hidden}
 .lb{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;background:#070d18;opacity:0;transition:opacity .2s ease;overscroll-behavior:contain;-webkit-tap-highlight-color:transparent}
@@ -636,11 +671,38 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
   </div>
 </div>
 
+<!-- POP-UP: al elegir el Plan Básico, ofrece el Completo con descuento -->
+<div class="up" id="up" role="dialog" aria-modal="true" aria-labelledby="upTitle" hidden>
+  <div class="up-box">
+    <div class="up-top">
+      <button type="button" class="up-x" id="upClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <span class="up-tag"><i></i>¡ESPERA! OFERTA ÚNICA</span>
+      <h3 class="up-h" id="upTitle">Llévate el <span>PLAN COMPLETO</span> por solo <em>US$ 2 más</em></h3>
+      <img class="up-img" src="assets/img/checkout/bundle-popup.webp" width="640" height="380" alt="Guía Visual con los 4 bonos" loading="lazy">
+    </div>
+    <div class="up-body">
+      <ul class="up-list">
+        <li><span><b>Guía Visual</b> con +50 fichas ilustradas</span></li>
+        <li><span><b>Bono 1:</b> Plan de Emergencia Eléctrica</span></li>
+        <li><span><b>Bono 2:</b> Mapa de tu Tablero</span></li>
+        <li><span><b>Bono 3:</b> Que no te engañen</span></li>
+        <li><span><b>Bono 4:</b> Tabla de Consumo y Fugas</span></li>
+      </ul>
+      <div class="up-price"><s>US$ 7,90</s><strong>US$ 6,90</strong></div>
+      <p class="up-note">Solo US$ 2 más que el Básico · Pago único</p>
+      <a href="#planos" class="up-yes" id="upYes">SÍ, LO QUIERO POR US$ 6,90</a>
+      <a href="#planos" class="up-no" id="upNo">No, gracias. Quiero solo la guía básica por US$ 4,90</a>
+      <p class="up-safe">🔒 Pago seguro · Acceso inmediato · Garantía de 7 días</p>
+    </div>
+  </div>
+</div>
+
 <script>
 /* ====== LINKS DE CHECKOUT (pegar aquí) ====== */
 var CHECKOUT = {
-  basico:   "https://ggcheckout.app/checkout/v2/bO3FbGkZ7oEz4sEGNufHzt",   // Plan Básico US$ 4,90
-  completo: "https://ggcheckout.app/checkout/v2/NaAcAzjCAWLFzYt8MG78mG"    // Plan Completo US$ 7,90
+  basico:   "https://ggcheckout.app/checkout/v5/bO3FbGkZ7oEz4sEGNufHzt",   // Plan Básico US$ 4,90
+  completo: "https://ggcheckout.app/checkout/v5/NaAcAzjCAWLFzYt8MG78mG",   // Plan Completo US$ 7,90
+  promo:    "https://ggcheckout.app/checkout/v5/4ym62muVwkyHFfguwftQpN"    // Pop-up do Básico: Plan Completo US$ 6,90
 };
 (function(){
   try{var d=new Date(),p=function(n){return(n<10?"0":"")+n};
@@ -650,6 +712,7 @@ var CHECKOUT = {
   document.querySelectorAll('[data-plan]').forEach(function(b){var u=CHECKOUT[b.getAttribute('data-plan')]; if(u){b.setAttribute('data-checkout',u); b.setAttribute('href',u);}});
   function go(e){
     var el=e.currentTarget, url=el.getAttribute('data-checkout');
+    if(el.getAttribute('data-plan')==='basico' && CHECKOUT.promo && window.__showUpsell){ e.preventDefault(); window.__showUpsell(); return; }
     if(url){e.preventDefault(); var q=location.search.replace(/^\?/,''); if(q) url+=(url.indexOf('?')>-1?'&':'?')+q; window.location.href=url; return;}
     if(!plans) return; e.preventDefault(); plans.scrollIntoView({behavior:'smooth',block:'start'});
   }
@@ -673,6 +736,29 @@ var CHECKOUT = {
       if(!paused && !window.__lbOpen && half){ x-=speed*dt; if(-x>=half){ x+=half; } track.style.transform='translateX('+x+'px)'; } requestAnimationFrame(frame); }
     measure(); window.addEventListener('load',measure); window.addEventListener('resize',measure); requestAnimationFrame(frame);
   });
+})();
+/* pop-up do Plano Básico → oferta do Completo por US$ 6,90 */
+(function(){
+  var up=document.getElementById('up'); if(!up) return;
+  var isOpen=false, pushed=false, lastF=null, yes=document.getElementById('upYes'), no=document.getElementById('upNo');
+  function withQ(u){ var q=location.search.replace(/^\?/,''); return q? u+(u.indexOf('?')>-1?'&':'?')+q : u; }
+  function closeUI(){ if(!isOpen) return; isOpen=false; up.classList.remove('open'); document.documentElement.classList.remove('lb-lock');
+    setTimeout(function(){ if(!isOpen) up.hidden=true; },300); if(lastF&&lastF.focus){ try{ lastF.focus({preventScroll:true}); }catch(e){} } }
+  function close(){ if(!isOpen) return; if(pushed){ pushed=false; history.back(); setTimeout(closeUI,450); } else closeUI(); }
+  window.__showUpsell=function(){ if(isOpen) return; isOpen=true; lastF=document.activeElement; up.hidden=false; document.documentElement.classList.add('lb-lock');
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ up.classList.add('open'); }); });
+    try{ history.pushState({up:1},'',location.href); pushed=true; }catch(e){ pushed=false; }
+    setTimeout(function(){ try{ yes.focus({preventScroll:true}); }catch(e){} },80); };
+  window.addEventListener('popstate',function(){ if(isOpen){ pushed=false; closeUI(); } });
+  yes.addEventListener('click',function(e){ e.preventDefault(); if(CHECKOUT.promo) window.location.href=withQ(CHECKOUT.promo); });
+  no.addEventListener('click',function(e){ e.preventDefault(); if(CHECKOUT.basico) window.location.href=withQ(CHECKOUT.basico); });
+  document.getElementById('upClose').addEventListener('click',close);
+  up.addEventListener('click',function(e){ if(e.target===up) close(); });
+  document.addEventListener('keydown',function(e){ if(!isOpen) return;
+    if(e.key==='Escape'){ e.preventDefault(); close(); }
+    else if(e.key==='Tab'){ var f=Array.prototype.slice.call(up.querySelectorAll('button,a[href]')), i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){ e.preventDefault(); f[f.length-1].focus(); } else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } } });
+  up.addEventListener('touchmove',function(e){ if(!e.target.closest('.up-box')) e.preventDefault(); },{passive:false});
 })();
 /* carga diferida das páginas do carrossel */
 (function(){
