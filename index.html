@@ -427,6 +427,15 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
 @media(min-width:761px){.mock-hero .mh-l{left:0}.mock-hero .mh-r{right:0}}
 @media(max-width:480px){.wa-note{max-width:330px}}
 .hero-bul{width:fit-content}
+.cmini{max-width:640px;margin:14px auto 0;color:var(--muted);font-size:clamp(14.5px,2.4vw,16.5px);line-height:1.5}.cmini b{color:var(--ink)}
+.bigline{max-width:640px;margin:22px auto 0;background:var(--primary);color:#fff;border-radius:14px;padding:14px 18px;font-family:var(--fh);font-weight:700;font-size:clamp(16px,2.8vw,20px)}.bigline b{color:var(--gold)}
+.faz4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:860px;margin:24px auto 0}
+.faz4 div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 10px;box-shadow:0 6px 16px rgba(11,37,69,.06)}
+.faz4 span{font-size:26px;display:block}.faz4 b{font-family:var(--fh);font-size:15px;display:block;margin-top:4px}.faz4 p{font-size:13px;color:var(--muted);line-height:1.35;margin-top:3px}
+@media(max-width:640px){.faz4{grid-template-columns:repeat(2,1fr)}}
+.urgp b{font-weight:800}
+.recebe{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:760px;margin:22px auto 0}
+.recebe div{text-align:center;font-size:12.5px;font-weight:700;color:var(--muted);line-height:1.3}.recebe span{display:block;font-size:24px;margin-bottom:3px}
 </style>
 <!-- PIXEL: pegar aquí el código del píxel de Meta -->
 <body>
@@ -494,11 +503,14 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
   </div>
 </section>
 
-<!-- COMO FUNCIONA (compacto) -->
+<!-- DOR + COMO FUNCIONA (compacto) -->
 <section class="sec how center">
   <div class="wrap">
-    <h2 class="h2">PARE DE TAPAR A TRINCA. <span class="coral">DESCUBRA POR QUE ELA ABRIU.</span></h2>
-    <p class="lead" style="max-width:640px;margin:14px auto 0;color:var(--muted)">Passou tapa-trinca e voltou? Cada trinca tem uma causa diferente. Tratar a errada é gastar material à toa.</p>
+    <h2 class="h2">SEU PISO ESTÁ AVISANDO. <span class="coral">VOCÊ SABE O QUE SIGNIFICA?</span></h2>
+    <p class="cmini">A resposta está espalhada: o vídeo do YouTube, o vizinho, o balconista, o grupo de WhatsApp, o Google… e "todo piso trinca". <b>Aí a trinca volta e você começa do zero.</b></p>
+    <div class="signs">
+      <span>🕸️ Fissuras em mapa</span><span>📏 Trinca reta</span><span>⬇️ Piso afundando</span><span>🥁 Som oco</span><span>💨 Solta pó</span><span>🧱 Junta quebrada</span>
+    </div>
     <div class="steps3">
       <div class="st"><b>1</b><h3>VEJA o sinal</h3><p>O Mapa Rápido leva você ao bloco certo.</p></div>
       <div class="st"><b>2</b><h3>COMPARE</h3><p>A ficha mostra qual trinca é e por que abriu.</p></div>
@@ -512,7 +524,33 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
       <div><i>✨</i><b>Superfície</b><small>6 fichas</small></div>
       <div><i>🏡</i><b>Área externa</b><small>7 fichas</small></div>
     </div>
-    <p class="mini">Para pedreiro, mestre de obra, quem está reformando e técnicos · no celular ou impresso</p>
+    <div class="bigline">💡 Pare de tapar a trinca. <b>Descubra por que ela abriu.</b></div>
+  </div>
+</section>
+
+<!-- O QUE O GUIA FAZ + CADA FICHA + PARA QUEM (compacto) -->
+<section class="sec win center">
+  <div class="wrap">
+    <h2 class="h2">O QUE O GUIA FAZ POR VOCÊ</h2>
+    <div class="faz4">
+      <div><span>👁️</span><b>Reconhecer</b><p>Foto com legendas e moeda para escala</p></div>
+      <div><span>⚖️</span><b>Diferenciar</b><p>Estética x estrutural, lado a lado</p></div>
+      <div><span>🎯</span><b>Achar a causa</b><p>Testes com moeda, régua e martelo</p></div>
+      <div><span>🛠️</span><b>Consertar certo</b><p>4 passos, materiais e erro comum</p></div>
+    </div>
+    <p class="cmini" style="margin-top:22px"><b>Ideal para você que é:</b></p>
+    <div class="signs" style="margin-top:8px">
+      <span>👷 Pedreiro</span><span>🦺 Mestre de obra</span><span>🏗️ Está reformando</span><span>🏠 Tem piso trincado</span><span>📐 Engenheiro ou técnico</span><span>🎓 Estudante</span>
+    </div>
+  </div>
+</section>
+
+<!-- GANCHO (agitação + urgência) -->
+<section class="urg">
+  <div class="wrap">
+    <h2>Você não precisa ser engenheiro. Precisa saber o que está vendo.</h2>
+    <p class="urgp">Passou tapa-trinca e voltou? O contrapiso rachou em 3 meses? <b>Trinca ativa não para sozinha:</b> vira piso refeito, cliente perdido e material jogado fora.</p>
+    <a href="#planos" class="btn" data-pv-cta="">QUERO DESCOBRIR A CAUSA</a>
   </div>
 </section>
 
@@ -588,7 +626,7 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
         <div class="pay">🔒 Pagamento seguro · Pix · Visa · Mastercard · Elo</div>
       </div>
     </div>
-    <div class="paygrid"><span>📩 Acesso imediato por e-mail · 🔒 Pagamento seguro · Pix ou cartão</span></div>
+    <div class="recebe"><div><span>🛒</span>Escolhe o plano</div><div><span>💳</span>Paga no Pix ou cartão</div><div><span>📩</span>Recebe no e-mail</div><div><span>📱</span>Abre no celular</div></div>
   </div>
 </section>
 
