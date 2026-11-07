@@ -411,6 +411,22 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
 .garsteps span{display:block;margin-top:4px;font-size:13.5px;line-height:1.35;color:#fff}
 @media(max-width:700px){.garcard{grid-template-columns:1fr;text-align:center;padding:28px 18px;gap:14px}.seal{max-width:190px;margin:0 auto}.garlead{margin:0 auto}.garsteps{grid-template-columns:1fr;gap:14px;text-align:left}.garsteps div:not(:last-child):after{content:"⌄";right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%);line-height:15px}}
 @media(prefers-reduced-motion:reduce){.seal-svg,.seal-svg .ring,.seal-svg .shine{animation:none}}
+
+/* ===== Ajustes de layout ===== */
+.plist{flex:0 0 auto;width:fit-content;max-width:100%;margin:20px auto 22px;text-align:left}
+.plist li.no{color:var(--muted);opacity:.75}
+.plist li.no .c{color:var(--coral)}
+.plan{justify-content:flex-start}
+.plan .price{margin-top:auto}
+.plan:not(.feat) .planimg.plain{max-width:200px}
+.plan .btn{margin-left:auto;margin-right:auto}
+.wa-note{text-align:center;justify-content:center;max-width:none;width:fit-content}
+.wincard{justify-content:flex-start}
+.wincard p{margin:0}
+.mock-hero{max-width:600px}
+@media(min-width:761px){.mock-hero .mh-l{left:0}.mock-hero .mh-r{right:0}}
+@media(max-width:480px){.wa-note{max-width:330px}}
+.hero-bul{width:fit-content}
 </style>
 <!-- PIXEL: pegar aquí el código del píxel de Meta -->
 <body>
@@ -602,9 +618,11 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
         <div class="pn">PLAN BÁSICO</div>
         <div class="planimg plain"><img src="assets/img/guia-capa.webp" width="600" height="803" loading="lazy" alt="Guía Visual de Humedades en Edificaciones"></div>
         <ul class="plist">
-          <li><span class="c">✓</span> Guía Visual de Humedades en Edificaciones</li>
-          <li><span class="c">✓</span> +50 fichas ilustradas en 6 bloques</li>
-          <li><span class="c">✓</span> Acceso inmediato por correo</li>
+          <li><span class="c">✓</span><span>Guía Visual de Humedades en Edificaciones</span></li>
+          <li><span class="c">✓</span><span>+50 fichas ilustradas en 6 bloques</span></li>
+          <li><span class="c">✓</span><span>6 comparaciones lado a lado</span></li>
+          <li><span class="c">✓</span><span>Acceso inmediato por correo</span></li>
+          <li class="no"><span class="c">✕</span><span>Sin los 4 bonos (US$ 40,60)</span></li>
         </ul>
         <div class="price"><div class="de">de US$ 14,90 por:</div><div class="big">US$ 4,90</div><div class="par">pago único con tarjeta</div></div>
         <div class="econ">💰 Ahorras <b>US$ 10,00</b></div>
@@ -622,14 +640,14 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
           <img class="mbc" src="assets/img/guia-capa.webp" width="600" height="803" loading="lazy" alt="Guía con los 4 bonos">
         </div>
         <ul class="plist">
-          <li><span class="c">✓</span> Guía Visual de Humedades en Edificaciones</li>
-          <li><span class="c">✓</span> +50 fichas ilustradas en 6 bloques</li>
+          <li><span class="c">✓</span><span>Guía Visual de Humedades en Edificaciones</span></li>
+          <li><span class="c">✓</span><span>+50 fichas ilustradas en 6 bloques</span></li>
           <li><span class="c">🎁</span><span><b>Bono 1:</b> ¿De dónde viene el agua?</span></li>
           <li><span class="c">🎁</span><span><b>Bono 2:</b> Tabla de Tratamientos</span></li>
           <li><span class="c">🎁</span><span><b>Bono 3:</b> Checklist de Inspección</span></li>
           <li><span class="c">🎁</span><span><b>Bono 4:</b> 5 Pruebas Caseras</span></li>
-          <li><span class="c">✓</span> Lista para imprimir o usar en el celular</li>
-          <li><span class="c">✓</span> Garantía de 7 días</li>
+          <li><span class="c">✓</span><span>Lista para imprimir o usar en el celular</span></li>
+          <li><span class="c">✓</span><span>Garantía de 7 días</span></li>
         </ul>
         <div class="price"><div class="de">de US$ 55,50 por:</div><div class="big"><span class="pc-anim">US$ 7,90</span></div><div class="par">pago único con tarjeta</div></div>
         <div class="econ">💰 Ahorras <b>US$ 47,60</b> (86% de descuento)</div>
