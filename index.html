@@ -239,7 +239,7 @@ footer .fl{color:#fff;font-family:var(--fh);font-weight:800;font-size:15px;margi
 /* carrossel marquee */
 .marquee{max-width:1180px;margin:26px auto 0;overflow:hidden;position:relative;padding:8px 0 14px}
 .mqtrack{display:flex;gap:18px;width:max-content;will-change:transform}
-.mqitem{flex:0 0 auto;width:clamp(272px,80vw,360px)}
+.mqitem{flex:0 0 auto;width:clamp(300px,86vw,440px)}
 .mqzoom{position:relative;display:block;width:100%;padding:0;margin:0;border:0;background:none;cursor:zoom-in;border-radius:16px;-webkit-tap-highlight-color:transparent;font:inherit;color:inherit}
 .mqzoom img{width:100%;height:auto;display:block;border-radius:16px;background:rgba(255,255,255,.07);box-shadow:0 22px 46px -16px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.16);transition:transform .25s ease}
 .mqzoom:hover img{transform:translateY(-5px)}
@@ -431,7 +431,7 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
 <!-- PIXEL: pegar aquí el código del píxel de Meta -->
 <body>
 
-<div class="topbar">⚡ OFERTA ESPECIAL DISPONÍVEL SÓ HOJE <span id="oferta-data"></span> · 🔒 COMPRA 100% SEGURA</div>
+<div class="topbar">⚡ OFERTA ESPECIAL SÓ HOJE · 🔒 COMPRA 100% SEGURA</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -477,47 +477,32 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
     <div class="marquee" data-speed="40">
       <div class="mqtrack">
         <div class="mqitem"><button type="button" class="mqzoom" data-i="0"><img data-src="assets/img/f01-mapa.webp" data-full="assets/img/hd/f01-mapa.webp" width="600" height="803" alt="Ficha 01: Fissuras em mapa no contrapiso"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="1"><img data-src="assets/img/f16-oco.webp" data-full="assets/img/hd/f16-oco.webp" width="600" height="803" alt="Ficha 16: Contrapiso oco"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="2"><img data-src="assets/img/c-estetica-estrutural.webp" data-full="assets/img/hd/c-estetica-estrutural.webp" width="600" height="803" alt="Comparação: trinca estética x estrutural"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="3"><img data-src="assets/img/f05-ralo.webp" data-full="assets/img/hd/f05-ralo.webp" width="600" height="803" alt="Ficha 05: Trinca em volta de ralo ou pilar"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="4"><img data-src="assets/img/f15-po.webp" data-full="assets/img/hd/f15-po.webp" width="600" height="803" alt="Ficha 15: Contrapiso soltando pó"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="5"><img data-src="assets/img/f08-degrau.webp" data-full="assets/img/hd/f08-degrau.webp" width="600" height="803" alt="Ficha 08: Trinca larga com degrau"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="6"><img data-src="assets/img/f25-sem-junta.webp" data-full="assets/img/hd/f25-sem-junta.webp" width="600" height="803" alt="Ficha 25: Piso sem junta"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="7"><img data-src="assets/img/p02-mapa-rapido.webp" data-full="assets/img/hd/p02-mapa-rapido.webp" width="600" height="803" alt="Mapa rápido: o que você está vendo?"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="8"><img data-src="assets/img/f03-reta.webp" data-full="assets/img/hd/f03-reta.webp" width="600" height="803" alt="Ficha 03: Trinca reta no meio da placa"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="9"><img data-src="assets/img/f37-garagem.webp" data-full="assets/img/hd/f37-garagem.webp" width="600" height="803" alt="Ficha 37: Garagem com trinca no meio"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="10"><img data-src="assets/img/c-ativa.webp" data-full="assets/img/hd/c-ativa.webp" width="600" height="803" alt="Comparação: trinca ativa x estabilizada"></button></div>
-        <div class="mqitem"><button type="button" class="mqzoom" data-i="11"><img data-src="assets/img/p53-checklist.webp" data-full="assets/img/hd/p53-checklist.webp" width="600" height="803" alt="Checklist rápido do piso"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="1"><img data-src="assets/img/f05-ralo.webp" data-full="assets/img/hd/f05-ralo.webp" width="600" height="803" alt="Ficha 05: Trinca em volta de ralo ou pilar"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="2"><img data-src="assets/img/f07-calcada.webp" data-full="assets/img/hd/f07-calcada.webp" width="600" height="803" alt="Ficha 07: Fissuras em calçada nova"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="3"><img data-src="assets/img/f03-reta.webp" data-full="assets/img/hd/f03-reta.webp" width="600" height="803" alt="Ficha 03: Trinca reta no meio da placa"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="4"><img data-src="assets/img/p03-escala.webp" data-full="assets/img/hd/p03-escala.webp" width="600" height="803" alt="Escala de atenção: quanto se preocupar"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="5"><img data-src="assets/img/f04-cantos.webp" data-full="assets/img/hd/f04-cantos.webp" width="600" height="803" alt="Ficha 04: Trinca nos cantos"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="6"><img data-src="assets/img/f15-po.webp" data-full="assets/img/hd/f15-po.webp" width="600" height="803" alt="Ficha 15: Contrapiso soltando pó"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="7"><img data-src="assets/img/f02-1dia.webp" data-full="assets/img/hd/f02-1dia.webp" width="600" height="803" alt="Ficha 02: Trinca no 1º dia"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="8"><img data-src="assets/img/f16-oco.webp" data-full="assets/img/hd/f16-oco.webp" width="600" height="803" alt="Ficha 16: Contrapiso oco"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="9"><img data-src="assets/img/p02-mapa-rapido.webp" data-full="assets/img/hd/p02-mapa-rapido.webp" width="600" height="803" alt="Mapa rápido: o que você está vendo?"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="10"><img data-src="assets/img/f06-emenda.webp" data-full="assets/img/hd/f06-emenda.webp" width="600" height="803" alt="Ficha 06: Trinca na emenda da concretagem"></button></div>
+        <div class="mqitem"><button type="button" class="mqzoom" data-i="11"><img data-src="assets/img/p04-antes.webp" data-full="assets/img/hd/p04-antes.webp" width="600" height="803" alt="Antes de começar: fotografe, meça e teste"></button></div>
       </div>
     </div>
     <a href="#planos" class="btn" data-pv-cta="" style="margin-top:22px">QUERO VER TODAS AS FICHAS</a>
   </div>
 </section>
 
-<!-- DOR -->
-<section class="sec dor center">
-  <div class="wrap">
-    <h2 class="h2">A RESPOSTA ESTÁ <span class="coral">ESPALHADA EM SEIS LUGARES</span></h2>
-    <p class="lead">Você vê a trinca, pergunta, e cada um fala uma coisa:</p>
-    <div class="scatter">
-      <span><i>▶️</i> O vídeo do YouTube</span><span><i>🏠</i> O conselho do vizinho</span><span><i>🏪</i> O balconista da loja de material</span><span><i>💬</i> O grupo de WhatsApp</span><span><i>🔎</i> O Google</span><span><i>🤷</i> "Isso é normal, todo piso trinca"</span>
-    </div>
-    <p class="restart">E quando a trinca volta, você começa do zero.</p>
-    <div class="dorfix">O guia junta tudo num lugar só: <b>você vê o sinal, acha a ficha e sabe a causa</b> antes de gastar com tapa-trinca, argamassa ou refazer o piso.</div>
-  </div>
-</section>
-
-<!-- MECANISMO -->
+<!-- COMO FUNCIONA (compacto) -->
 <section class="sec how center">
   <div class="wrap">
-    <h2 class="h2">CONSULTA PELA TRINCA. <span class="teal">CONSERTO CERTO.</span></h2>
-    <div class="signs">
-      <span>🕸️ Fissuras em mapa</span><span>📏 Trinca reta</span><span>⬇️ Piso afundando</span><span>🥁 Som oco</span><span>💨 Solta pó</span><span>🧱 Junta quebrada</span>
-    </div>
+    <h2 class="h2">PARE DE TAPAR A TRINCA. <span class="coral">DESCUBRA POR QUE ELA ABRIU.</span></h2>
+    <p class="lead" style="max-width:640px;margin:14px auto 0;color:var(--muted)">Passou tapa-trinca e voltou? Cada trinca tem uma causa diferente. Tratar a errada é gastar material à toa.</p>
     <div class="steps3">
-      <div class="st"><b>1</b><h3>VOCÊ VÊ o sinal</h3><p>O Mapa Rápido leva você ao bloco certo.</p></div>
-      <div class="st"><b>2</b><h3>COMPARA</h3><p>A ficha ilustrada mostra qual trinca é e a causa.</p></div>
-      <div class="st"><b>3</b><h3>CONSERTA CERTO</h3><p>O que verificar, nível de atenção e o passo a passo.</p></div>
+      <div class="st"><b>1</b><h3>VEJA o sinal</h3><p>O Mapa Rápido leva você ao bloco certo.</p></div>
+      <div class="st"><b>2</b><h3>COMPARE</h3><p>A ficha mostra qual trinca é e por que abriu.</p></div>
+      <div class="st"><b>3</b><h3>CONSERTE CERTO</h3><p>Nível de atenção e passo a passo com materiais.</p></div>
     </div>
     <div class="blocks6">
       <div><i>🕸️</i><b>Retração</b><small>7 fichas</small></div>
@@ -527,108 +512,7 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
       <div><i>✨</i><b>Superfície</b><small>6 fichas</small></div>
       <div><i>🏡</i><b>Área externa</b><small>7 fichas</small></div>
     </div>
-    <p class="mini">+ 6 comparações lado a lado · mapa rápido · checklist em 15 minutos · quando chamar um engenheiro</p>
-    <div class="bigidea" style="background:var(--primary);color:#fff;border-color:rgba(255,122,0,.6)"><div class="lbl">A GRANDE IDEIA</div><p>Pare de tapar a trinca. Descubra por que ela abriu.</p></div>
-  </div>
-</section>
-
-<!-- O QUE TEM EM CADA FICHA -->
-<section class="sec tem center">
-  <div class="wrap">
-    <h2 class="h2">O QUE CADA FICHA TRAZ</h2>
-    <div class="tem-list">
-      <div class="temi"><span class="e">📸</span><b>Foto com legendas e moeda para escala</b></div>
-      <div class="temi"><span class="e">👁️</span><b>O que você está vendo (4 sinais)</b></div>
-      <div class="temi"><span class="e">🧩</span><b>Por que acontece, desenhado em corte</b></div>
-      <div class="temi"><span class="e">⚖️</span><b>"É isso ou aquilo?" com fotos</b></div>
-      <div class="temi"><span class="e">✅</span><b>O que verificar com moeda, régua e martelo</b></div>
-      <div class="temi"><span class="e">🚦</span><b>Nível de atenção: registrar até intervir</b></div>
-      <div class="temi"><span class="e">🛠️</span><b>Conserto certo em 4 passos + materiais</b></div>
-      <div class="temi"><span class="e">⛔</span><b>Erro comum e como prevenir</b></div>
-    </div>
-    <div class="tem-photo two"><img src="assets/img/f08-degrau.webp" width="600" height="803" loading="lazy" alt="Ficha trinca larga com degrau"><img src="assets/img/f25-sem-junta.webp" width="600" height="803" loading="lazy" alt="Ficha piso sem junta"></div>
-  </div>
-</section>
-
-<!-- O QUE FAZ POR VOCÊ -->
-<section class="sec win center">
-  <div class="wrap">
-    <h2 class="h2">O QUE ESTE GUIA FAZ POR VOCÊ</h2>
-    <div class="grid g4" style="margin-top:30px">
-      <div class="wincard"><span class="ic">👁️</span><h3>Reconhecer</h3><p style="font-size:14px;color:var(--muted)">Fissura, trinca, pó, som oco, junta quebrada: cada sinal com foto e legenda.</p></div>
-      <div class="wincard"><span class="ic">⚖️</span><h3>Diferenciar</h3><p style="font-size:14px;color:var(--muted)">Estética ou estrutural? Retração ou recalque? Comparadas lado a lado.</p></div>
-      <div class="wincard"><span class="ic">🎯</span><h3>Descobrir a causa</h3><p style="font-size:14px;color:var(--muted)">Testes simples com moeda, régua e martelinho, sem quebrar nada.</p></div>
-      <div class="wincard"><span class="ic">🛠️</span><h3>Consertar certo</h3><p style="font-size:14px;color:var(--muted)">O produto certo, o passo a passo e se é urgente ou pode esperar.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- AGITAÇÃO -->
-<section class="sec agi center">
-  <div class="wrap">
-    <h2 class="h2">VOCÊ NÃO PRECISA SER ENGENHEIRO. <span class="teal">PRECISA SABER O QUE ESTÁ VENDO E O QUE FAZER PRIMEIRO.</span></h2>
-    <div class="agitext">
-      <p>Passou tapa-trinca e voltou. O contrapiso ficou pronto e em 3 meses rachou. O cliente reclamou e você não soube explicar o porquê.</p>
-      <p>Não é azar: <b>cada trinca tem uma causa diferente</b>. A de retração não se conserta como a de recalque, nem como a junta que faltou. Se você trata a errada, gasta material e a trinca volta no mesmo lugar.</p>
-      <p>O guia mostra <b>as trincas e problemas mais comuns em contrapiso, calçada, garagem e quintal</b>, com ilustração, para você acertar o conserto na primeira vez.</p>
-    </div>
-    <div class="agibox"><b>Tapar a trinca não resolve a causa.</b><span>Descobrir por que ela abriu, sim.</span></div>
-    <a href="#planos" class="btn" data-pv-cta="">QUERO O GUIA AGORA</a>
-  </div>
-</section>
-
-<!-- URGÊNCIA -->
-<section class="urg">
-  <div class="wrap">
-    <h2>Trinca ativa não para sozinha</h2>
-    <p class="urgp">Cada mês ela abre um pouco mais. No fim é piso refeito, cliente perdido e dinheiro jogado fora em material. Quanto antes você descobre a causa, menos você gasta.</p>
-    <a href="#planos" class="btn" data-pv-cta="">QUERO DESCOBRIR A CAUSA</a>
-  </div>
-</section>
-
-<!-- PERGUNTA -->
-<section class="sec dor center" style="padding:44px 0">
-  <div class="wrap">
-    <h2 class="h2" style="font-size:clamp(23px,4.4vw,38px)">ATÉ QUANDO CADA TRINCA VAI VIRAR <span class="coral">UMA PESQUISA NOVA DO ZERO?</span></h2>
-  </div>
-</section>
-
-<!-- IDEAL PARA VOCÊ -->
-<section class="sec win center" style="background:#fff">
-  <div class="wrap">
-    <h2 class="h2">IDEAL PARA VOCÊ SE…</h2>
-    <div class="grid g3" style="margin-top:30px">
-      <div class="wincard"><span class="ic">👷</span><h3>É pedreiro e quer parar de voltar na obra</h3></div>
-      <div class="wincard"><span class="ic">🏗️</span><h3>Está construindo ou reformando</h3></div>
-      <div class="wincard"><span class="ic">🏠</span><h3>Tem piso trincado em casa</h3></div>
-      <div class="wincard"><span class="ic">🦺</span><h3>É mestre de obra e precisa explicar ao cliente</h3></div>
-      <div class="wincard"><span class="ic">📐</span><h3>É engenheiro ou técnico e quer referência rápida</h3></div>
-      <div class="wincard"><span class="ic">🎓</span><h3>É estudante de engenharia ou edificações</h3></div>
-    </div>
-  </div>
-</section>
-
-<!-- TUDO NUM LUGAR SÓ -->
-<section class="sec org center">
-  <div class="wrap">
-    <h2 class="h2">TUDO NUM LUGAR SÓ</h2>
-    <div class="org-mock"><img src="assets/img/checkout/bundle-popup.webp" width="640" height="380" loading="lazy" alt="Guia com os 4 bônus"></div>
-    <ul class="orglist">
-      <li><span class="c">✓</span>42 fichas ilustradas em 6 blocos</li>
-      <li><span class="c">✓</span>6 comparações lado a lado</li>
-      <li><span class="c">✓</span>Mapa rápido: do sinal à ficha certa</li>
-      <li><span class="c">✓</span>Escala de atenção em 4 níveis</li>
-      <li><span class="c">✓</span>Como fotografar e medir uma trinca</li>
-      <li><span class="c">✓</span>Conserto certo em 4 passos por ficha</li>
-      <li><span class="c">✓</span>Lista de materiais em cada ficha</li>
-      <li><span class="c">✓</span>Erro comum e prevenção</li>
-      <li><span class="c">✓</span>Teste do selo de papel (trinca ativa)</li>
-      <li><span class="c">✓</span>Checklist do piso em 15 minutos</li>
-      <li><span class="c">✓</span>Quando chamar um engenheiro</li>
-      <li><span class="c">✓</span>Funciona no celular ou impresso</li>
-      <li><span class="c">✓</span>Acesso imediato por e-mail</li>
-      <li><span class="c">✓</span>Garantia de 7 dias</li>
-    </ul>
+    <p class="mini">Para pedreiro, mestre de obra, quem está reformando e técnicos · no celular ou impresso</p>
   </div>
 </section>
 
@@ -744,19 +628,6 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
           <div><b>NÃO SERVIU?</b><span>Devolvemos 100%, sem perguntas.</span></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACESSO -->
-<section class="sec passos center">
-  <div class="wrap">
-    <h2 class="h2">COMO VOCÊ RECEBE O GUIA</h2>
-    <div class="grid g4" style="margin-top:30px">
-      <div class="passo"><div class="pic">🛒</div><h3>1. Escolhe o plano</h3><p>Básico ou Completo com os 4 bônus.</p></div>
-      <div class="passo"><div class="pic">💳</div><h3>2. Paga no Pix ou cartão</h3><p>Pagamento único e seguro.</p></div>
-      <div class="passo"><div class="pic">📩</div><h3>3. Recebe o e-mail</h3><p>Na hora, com o acesso ao PDF.</p></div>
-      <div class="passo"><div class="pic">📱</div><h3>4. Abre e consulta</h3><p>No celular, no computador ou impresso.</p></div>
     </div>
   </div>
 </section>
