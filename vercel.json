@@ -1,5 +1,6 @@
 {
   "headers": [
-    { "source": "/assets/img/checkout/(.*)", "headers": [ { "key": "Access-Control-Allow-Origin", "value": "*" } ] }
+    { "source": "/assets/img/checkout/(.*)", "headers": [ { "key": "Access-Control-Allow-Origin", "value": "*" } ] },
+    { "source": "/entrega-fdacb89866076f63/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" }, { "key": "Content-Disposition", "value": "inline" } ] }
   ]
 }
