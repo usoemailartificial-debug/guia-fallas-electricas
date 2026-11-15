@@ -941,7 +941,7 @@ var CHECKOUT = {
   CHECKOUT.basico=G+l[2];CHECKOUT.completo=G+l[3];CHECKOUT.promo=G+l[4];
   document.querySelectorAll('[data-plan]').forEach(function(b){var u=CHECKOUT[b.getAttribute('data-plan')];if(u){b.setAttribute('data-checkout',u);b.setAttribute('href',u);}});
   var w=document.createTreeWalker(document.body,4),n;
-  while(n=w.nextNode())if(n.nodeValue.indexOf('US$')>-1)n.nodeValue=n.nodeValue.replace(/US\$ ?(\d+(?:,\d+)?)/g,function(m,v){return l[5][v]?l[0]+' '+l[5][v]:m;}).replace('dólares (USD)',l[1]);
+  while(n=w.nextNode())if(/US|Amex/.test(n.nodeValue))n.nodeValue=n.nodeValue.replace(/US\$ ?(\d+(?:,\d+)?)/g,function(m,v){return l[5][v]?l[0]+' '+l[5][v]:m;}).replace('dólares (USD)',l[1]).replace(c!='MX'?' · Amex':'@@','');
   return;
  }
  var r=R[c];if(!r)return;
