@@ -932,7 +932,7 @@ var CHECKOUT = {
  var c=null;try{var q=new URLSearchParams(location.search).get('pais');if(q)c=q.toUpperCase();else{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';c=tz.indexOf('America/Argentina')===0||tz==='America/Buenos_Aires'?'AR':Z[tz]||null;}}catch(e){}
  if(!c||!R[c])return;var r=R[c];
  document.querySelectorAll('.lp').forEach(function(el){var v=parseFloat(el.dataset.usd)*r[1];v=Math.round(v/r[2])*r[2];
-  var t=r[2]<1?v.toFixed(1).replace('.',','):Math.round(v).toLocaleString('es');el.textContent='(≈ $ '+t+' '+r[0]+')';});
+  var t=r[2]<1?v.toFixed(1).replace('.',','):String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');el.textContent='(≈ $ '+t+' '+r[0]+')';});
 })();
 </script>
 </body>
