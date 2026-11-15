@@ -15,8 +15,6 @@
 <link rel="preconnect" href="https://cdn.utmify.com.br">
 <link rel="preconnect" href="https://ggcheckout.app">
 <link rel="preload" as="image" href="assets/img/guia-capa.webp" fetchpriority="high">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/pxiByp8kv8JHgFVrLDD4Z1xlFQ-d0e6a9ae.woff2" crossorigin>
 <!-- UTMify UTMs -->
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 <!-- Meta Pixel Code -->
@@ -41,7 +39,7 @@ src="https://www.facebook.com/tr?id=1823645382008212&ev=PageView&noscript=1"
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        y=l.getElementsByTagName(r)[0];var go=function(){y.parentNode.insertBefore(t,y);};if(l.readyState==="complete")go();else c.addEventListener("load",go);
     })(window, document, "clarity", "script", "zdsz7hztl1");
 </script>
 <!-- End Microsoft Clarity -->
@@ -469,8 +467,8 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
     <h1>RECONOCE CUALQUIER FALLA ELÉCTRICA EN CASA CON <span class="grad-text">+50 FICHAS VISUALES</span> ANTES DE QUE SE CONVIERTA EN UN INCENDIO</h1>
     <p class="sub">Compara <b>enchufes quemados, falsos contactos, pastillas que se botan, cables calientes y fugas de corriente</b> para saber qué estás viendo, cuál es la causa más probable y qué hacer primero.</p>
     <div class="mock-hero" aria-label="Vista de la guía y sus fichas">
-      <img class="mh-l" decoding="async" src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha Enchufe quemado">
-      <img class="mh-r" decoding="async" src="assets/img/f15-pastilla.webp" width="386" height="517" alt="Ficha La pastilla se bota sola">
+      <img fetchpriority="low" class="mh-l" decoding="async" src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha Enchufe quemado">
+      <img fetchpriority="low" class="mh-r" decoding="async" src="assets/img/f15-pastilla.webp" width="386" height="517" alt="Ficha La pastilla se bota sola">
       <img class="mh-c" src="assets/img/guia-capa.webp" width="386" height="517" alt="Portada de la Guía Visual de Fallas Eléctricas en Casa" fetchpriority="high">
       <span class="mh-seal">ACCESO<br>INMEDIATO</span>
     </div>
@@ -553,10 +551,10 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
     <h2 class="h2">4 BONOS GRATIS</h2>
     <p class="bonwarn">solo hoy · si compras después, no los recibes</p>
     <div class="bongrid">
-      <div class="bc"><img src="assets/img/bono1.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 1 Plan de Emergencia Eléctrica"><h3>Plan de Emergencia Eléctrica</h3><p>Qué hacer en los primeros minutos + tarjeta para el tablero.</p><div class="val"><s>US$ 9,90</s> <b>GRATIS</b></div></div>
-      <div class="bc"><img src="assets/img/bono2.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 2 Mapa de tu Tablero"><h3>Mapa de tu Tablero</h3><p>Sabe qué pastilla bajar en segundos. Con etiquetas.</p><div class="val"><s>US$ 7,90</s> <b>GRATIS</b></div></div>
-      <div class="bc"><img src="assets/img/bono3.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 3 Que no te engañen"><h3>Que no te engañen</h3><p>Preguntas, presupuestos y checklist antes de pagar.</p><div class="val"><s>US$ 12,90</s> <b>GRATIS</b></div></div>
-      <div class="bc"><img src="assets/img/bono4.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 4 Tabla de Consumo y Fugas"><h3>Consumo y Fugas</h3><p>Qué gasta cada aparato y la prueba del medidor.</p><div class="val"><s>US$ 9,90</s> <b>GRATIS</b></div></div>
+      <div class="bc"><img srcset="assets/img/bono1-300.webp 300w, assets/img/bono1.webp 448w" sizes="(max-width:760px) 45vw, 220px" src="assets/img/bono1.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 1 Plan de Emergencia Eléctrica"><h3>Plan de Emergencia Eléctrica</h3><p>Qué hacer en los primeros minutos + tarjeta para el tablero.</p><div class="val"><s>US$ 9,90</s> <b>GRATIS</b></div></div>
+      <div class="bc"><img srcset="assets/img/bono2-300.webp 300w, assets/img/bono2.webp 448w" sizes="(max-width:760px) 45vw, 220px" src="assets/img/bono2.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 2 Mapa de tu Tablero"><h3>Mapa de tu Tablero</h3><p>Sabe qué pastilla bajar en segundos. Con etiquetas.</p><div class="val"><s>US$ 7,90</s> <b>GRATIS</b></div></div>
+      <div class="bc"><img srcset="assets/img/bono3-300.webp 300w, assets/img/bono3.webp 448w" sizes="(max-width:760px) 45vw, 220px" src="assets/img/bono3.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 3 Que no te engañen"><h3>Que no te engañen</h3><p>Preguntas, presupuestos y checklist antes de pagar.</p><div class="val"><s>US$ 12,90</s> <b>GRATIS</b></div></div>
+      <div class="bc"><img srcset="assets/img/bono4-300.webp 300w, assets/img/bono4.webp 448w" sizes="(max-width:760px) 45vw, 220px" src="assets/img/bono4.webp" width="448" height="600" loading="lazy" decoding="async" alt="Bono 4 Tabla de Consumo y Fugas"><h3>Consumo y Fugas</h3><p>Qué gasta cada aparato y la prueba del medidor.</p><div class="val"><s>US$ 9,90</s> <b>GRATIS</b></div></div>
     </div>
     <div class="bontotal">Valor de los bonos: <s>US$ 40,60</s> → <b>GRATIS hoy</b></div>
   </div>
@@ -594,10 +592,10 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
         <span class="fbadge">⭐ MÁS VENDIDO · MEJOR VALOR</span>
         <div class="pn">PLAN COMPLETO</div>
         <div class="mock-bundle small">
-          <img class="mb1" src="assets/img/bono1.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
-          <img class="mb2" src="assets/img/bono2.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
-          <img class="mb3" src="assets/img/bono3.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
-          <img class="mb4" src="assets/img/bono4.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
+          <img class="mb1" srcset="assets/img/bono1-300.webp 300w, assets/img/bono1.webp 448w" sizes="150px" src="assets/img/bono1.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
+          <img class="mb2" srcset="assets/img/bono2-300.webp 300w, assets/img/bono2.webp 448w" sizes="150px" src="assets/img/bono2.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
+          <img class="mb3" srcset="assets/img/bono3-300.webp 300w, assets/img/bono3.webp 448w" sizes="150px" src="assets/img/bono3.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
+          <img class="mb4" srcset="assets/img/bono4-300.webp 300w, assets/img/bono4.webp 448w" sizes="150px" src="assets/img/bono4.webp" width="448" height="600" loading="lazy" decoding="async" alt="">
           <img class="mbc" src="assets/img/guia-capa.webp" width="386" height="517" loading="lazy" decoding="async" alt="Guía con los 4 bonos">
         </div>
         <ul class="plist">
