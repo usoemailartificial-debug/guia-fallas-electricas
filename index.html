@@ -457,13 +457,25 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.seal-svg,.seal-svg .ring,.seal-svg .shine{animation:none}}
 </style>
 <!-- PIXEL: pegar aquí el código del píxel de Meta -->
+<style>
+.hero2 h1{font-size:clamp(25px,6.4vw,42px);line-height:1.15;margin-top:12px}
+.hsub{margin:10px auto 0;font-weight:700;font-size:15.5px;opacity:.92}
+.probs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px auto 0;max-width:520px}
+.probs span{font-family:var(--fb);font-weight:700;font-size:13.5px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,196,0,.45)}
+.hero2 .mock-hero{height:clamp(220px,58vw,400px);margin:14px auto 4px}
+.hprice{margin:6px auto 12px;font-size:16px;font-weight:600}
+.hprice b{color:#FFC400;font-weight:900}
+.lp:not(:empty){display:inline;margin-left:6px;font-weight:700;opacity:.9}
+.lpb:not(:empty){display:block;margin:2px 0 0;font-size:15px;opacity:.75}
+.hero2 .btn{margin-top:0}
+</style>
 </head>
 <body>
 
 <div class="topbar">⚡ OFERTA DE LANZAMIENTO DISPONIBLE SOLO HOY · 🔒 COMPRA 100% SEGURA</div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero hero2">
   <svg class="blueprint" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs>
       <pattern id="bp" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"></path></pattern>
@@ -476,21 +488,20 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
   </svg>
   <div class="wrap hero-in">
     <span class="pill">🔌 ¿QUÉ ESTÁS VIENDO EN TU CASA?</span>
-    <h1>RECONOCE CUALQUIER FALLA ELÉCTRICA EN CASA CON <span class="grad-text">+50 FICHAS VISUALES</span> ANTES DE QUE SE CONVIERTA EN UN INCENDIO</h1>
-    <p class="sub">Compara <b>enchufes quemados, falsos contactos, pastillas que se botan, cables calientes y fugas de corriente</b> para saber qué estás viendo, cuál es la causa más probable y qué hacer primero.</p>
+    <h1>Reconoce cualquier falla eléctrica en casa <span class="grad-text">antes de que se convierta en un incendio</span></h1>
+    <p class="hsub">+50 fichas con foto · nivel de riesgo 🟢🟡🔴 en cada una</p>
+    <div class="probs">
+      <span>🔥 Enchufe quemado</span><span>⚡ Pastilla que se bota</span><span>🌡️ Cable caliente</span><span>💡 Luz que parpadea</span>
+    </div>
     <div class="mock-hero" aria-label="Vista de la guía y sus fichas">
       <img fetchpriority="low" class="mh-l" decoding="async" src="assets/img/f01-enchufe.webp" width="386" height="517" alt="Ficha Enchufe quemado">
       <img fetchpriority="low" class="mh-r" decoding="async" src="assets/img/f15-pastilla.webp" width="386" height="517" alt="Ficha La pastilla se bota sola">
       <img class="mh-c" src="assets/img/guia-capa.webp" width="386" height="517" alt="Portada de la Guía Visual de Fallas Eléctricas en Casa" fetchpriority="high">
       <span class="mh-seal">ACCESO<br>INMEDIATO</span>
     </div>
-    <ul class="hero-bul">
-      <li>✅ +50 fichas ilustradas para consulta rápida</li>
-      <li>✅ Compara fallas que parecen iguales</li>
-      <li>✅ Nivel de atención 🟢🟡🔴 en cada ficha</li>
-    </ul>
+    <div class="hprice">Hoy <b>US$ 7,90</b><span class="lp" data-usd="7.90"></span> con <b>4 bonos</b> · pago único</div>
     <a href="#planos" class="btn" data-pv-cta="">QUIERO LA GUÍA AHORA</a>
-    <div class="wa-note"><span>📩 Recibes todo <b>al instante</b> en tu <b>correo electrónico</b></span></div>
+    <div class="wa-note"><span>📩 Recibes todo <b>al instante</b> en tu correo · 🔒 Pago seguro</span></div>
   </div>
 </section>
 
@@ -595,7 +606,7 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
           <li><span class="c">✓</span> +50 fichas ilustradas en 6 bloques</li>
           <li><span class="c">✓</span> Acceso inmediato por correo</li>
         </ul>
-        <div class="price"><div class="de">de US$ 14,90 por:</div><div class="big">US$ 4,90</div><div class="par">pago único con tarjeta</div></div>
+        <div class="price"><div class="de">de US$ 14,90 por:</div><div class="big">US$ 4,90</div><div class="lp lpb" data-usd="4.90"></div><div class="par">pago único con tarjeta</div></div>
         <div class="econ">💰 Ahorras <b>US$ 10,00</b></div>
         <a href="#planos" class="btn gold" data-pv-cta="" data-checkout="" data-plan="basico">QUIERO EL PLAN BÁSICO</a>
         <div class="upwarn">⚠️ Atención: hay una oferta aún mejor con los 4 bonos 👉</div>
@@ -620,7 +631,7 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
           <li><span class="c">✓</span> Lista para imprimir o usar en el celular</li>
           <li><span class="c">✓</span> Garantía de 7 días</li>
         </ul>
-        <div class="price"><div class="de">de US$ 55,50 por:</div><div class="big"><span class="pc-anim">US$ 7,90</span></div><div class="par">pago único con tarjeta</div></div>
+        <div class="price"><div class="de">de US$ 55,50 por:</div><div class="big"><span class="pc-anim">US$ 7,90</span></div><div class="lp lpb" data-usd="7.90"></div><div class="par">pago único con tarjeta</div></div>
         <div class="econ">💰 Ahorras <b>US$ 47,60</b> (86% de descuento)</div>
         <a href="#planos" class="btn" data-pv-cta="" data-checkout="" data-plan="completo">QUIERO EL PLAN COMPLETO</a>
         <div class="pay">🔒 Pago seguro · Visa · Mastercard · Amex</div>
@@ -912,6 +923,16 @@ var CHECKOUT = {
     tapT=setTimeout(function(){ if(out&&s<=1.02) close(); },340); }
   stage.addEventListener('wheel',function(e){ e.preventDefault(); var m=rel(e.clientX,e.clientY);
     zoomTo(s*Math.exp(-e.deltaY*(e.ctrlKey?0.012:0.0022)),m.x,m.y,false); },{passive:false});
+})();
+</script>
+<script>
+(function(){
+ var R={MX:['MXN',18.6,1],AR:['ARS',1550,100],CO:['COP',3250,100],CL:['CLP',980,10],PE:['PEN',3.45,0.1],GT:['GTQ',7.7,1],CR:['CRC',505,10],DO:['DOP',61,1],UY:['UYU',40,1],BO:['BOB',6.9,1],PY:['PYG',7600,100],HN:['HNL',26,1]};
+ var Z={'America/Mexico_City':'MX','America/Monterrey':'MX','America/Tijuana':'MX','America/Merida':'MX','America/Cancun':'MX','America/Chihuahua':'MX','America/Hermosillo':'MX','America/Mazatlan':'MX','America/Bogota':'CO','America/Santiago':'CL','America/Lima':'PE','America/Guatemala':'GT','America/Costa_Rica':'CR','America/Santo_Domingo':'DO','America/Montevideo':'UY','America/La_Paz':'BO','America/Asuncion':'PY','America/Tegucigalpa':'HN'};
+ var c=null;try{var q=new URLSearchParams(location.search).get('pais');if(q)c=q.toUpperCase();else{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';c=tz.indexOf('America/Argentina')===0||tz==='America/Buenos_Aires'?'AR':Z[tz]||null;}}catch(e){}
+ if(!c||!R[c])return;var r=R[c];
+ document.querySelectorAll('.lp').forEach(function(el){var v=parseFloat(el.dataset.usd)*r[1];v=Math.round(v/r[2])*r[2];
+  var t=r[2]<1?v.toFixed(1).replace('.',','):Math.round(v).toLocaleString('es');el.textContent='(≈ $ '+t+' '+r[0]+')';});
 })();
 </script>
 </body>
