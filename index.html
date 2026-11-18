@@ -471,6 +471,8 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
 @media(min-width:761px){.mock-hero .mh-l{left:0}.mock-hero .mh-r{right:0}}
 @media(max-width:480px){.wa-note{max-width:330px}}
 .hero-bul{width:fit-content}
+.hero .hprice+.btn{margin-top:4px}@media(max-width:480px){.hero .sub{display:none}}.hero .btn+.hero-bul{margin-top:18px}
+.hprice{margin:12px auto 12px;font-size:16px;font-weight:600;color:rgba(255,255,255,.95)}.hprice b{color:#FFC400;font-weight:900}
 .cmini{max-width:640px;margin:14px auto 0;color:var(--muted);font-size:clamp(14.5px,2.4vw,16.5px);line-height:1.5}.cmini b{color:var(--ink)}
 .bigline{max-width:640px;margin:22px auto 0;background:var(--primary);color:#fff;border-radius:14px;padding:14px 18px;font-family:var(--fh);font-weight:700;font-size:clamp(16px,2.8vw,20px)}.bigline b{color:var(--gold)}
 .faz4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:860px;margin:24px auto 0}
@@ -499,7 +501,7 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
     <circle cx="1030" cy="150" r="100" fill="url(#glow)" opacity=".35"></circle>
   </svg>
   <div class="wrap hero-in">
-    <span class="pill">💧 ¿QUÉ ESTÁS VIENDO EN TU PARED?</span>
+    <span class="pill">💧 ¿PINTÓ Y LA MANCHA VOLVIÓ?</span>
     <h1>DESCUBRE DE DÓNDE VIENE LA HUMEDAD CON <span class="grad-text">+50 FICHAS VISUALES</span> ANTES DE ROMPER LA PARED</h1>
     <p class="sub">Compara <b>manchas, moho, salitre, pintura que se pela y goteras</b> para saber qué estás viendo, de dónde viene el agua y cómo tratarla bien.</p>
     <div class="mock-hero" aria-label="Vista de la guía y sus fichas">
@@ -508,12 +510,13 @@ html.lb-lock,html.lb-lock body{overflow:hidden}
       <img class="mh-c" srcset="assets/img/guia-capa-480.webp 480w, assets/img/guia-capa.webp 600w" sizes="(max-width:640px) 250px, 380px" src="assets/img/guia-capa.webp" width="600" height="803" alt="Portada de la Guía Visual de Humedades en Edificaciones" fetchpriority="high">
       <span class="mh-seal">ACCESO<br>INMEDIATO</span>
     </div>
+    <div class="hprice">Guía en PDF · hoy desde <b>US$ 4,90</b></div>
+    <a href="#planos" class="btn" data-pv-cta="">QUIERO LA GUÍA AHORA</a>
     <ul class="hero-bul">
       <li>✅ +50 fichas ilustradas para consulta rápida</li>
       <li>✅ Compara humedades que parecen iguales</li>
       <li>✅ La solución indicada en cada ficha</li>
     </ul>
-    <a href="#planos" class="btn" data-pv-cta="">QUIERO LA GUÍA AHORA</a>
     <div class="wa-note"><span>📩 Recibes todo <b>al instante</b> en tu <b>correo electrónico</b></span></div>
   </div>
 </section>
